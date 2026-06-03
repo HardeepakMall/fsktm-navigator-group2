@@ -6,81 +6,152 @@ class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      body: Container(
+        width: double.infinity,
+        height: double.infinity,
 
-      body: SafeArea(
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('assets/images/splash_bg.png'),
+            fit: BoxFit.cover,
+          ),
+        ),
 
-              // UPM Logo
-              Image.asset(
-                'lib/assets/images/upm_logo.png',
-                height: 100,
-              ),
+        child: SafeArea(
+          child: SingleChildScrollView(
+            child: Center(
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 24),
+                child: Column(
+                  children: [
+                    const SizedBox(height: 70),
 
-              SizedBox(height: 20),
+                    Image.asset(
+                      'assets/images/upm_logo.png',
+                      height: 90,
+                    ),
 
-              // FSKTM
-              Text(
-                'FSKTM',
-                style: TextStyle(
-                  fontSize: 40,
-                  fontWeight: FontWeight.bold,
-                  color: const Color.fromARGB(255, 0, 0, 0),
+                    const SizedBox(height: 9),
+
+                    const Text(
+                      'FSKTM',
+                      style: TextStyle(
+                        fontSize: 47,
+                        fontWeight: FontWeight.bold,
+                        color: Color.fromARGB(255, 0, 91, 38),
+                      ),
+                    ),
+
+                    const Text(
+                      'NAVIGATOR',
+                      style: TextStyle(
+                        fontSize: 28,
+                        fontWeight: FontWeight.w500,
+                        color: Color.fromARGB(255, 0, 170, 71),
+                      ),
+                    ),
+
+                    const SizedBox(height: 6),
+
+                    const Text(
+                      'Navigate • Explore • Go Green',
+                      style: TextStyle(
+                        fontSize: 17,
+                        fontWeight: FontWeight.bold,
+                        color: Color.fromARGB(221, 0, 0, 0),
+                      ),
+                    ),
+                    const SizedBox(height: 250),
+
+
+                    const Text(
+                      'SSE3401 Mobile Application Development',
+                      style: TextStyle(
+                        fontSize: 17,
+                      fontWeight: FontWeight.bold,
+                      color: Color.fromARGB(255, 255, 255, 255),
+                      )
+                    ),
+
+                    const SizedBox(height: 3),
+
+                    const Text(
+                      'Lecturer: Ts. Dr. Sufri Muhammad',
+                      style: TextStyle(
+                        fontSize: 17,
+                      fontWeight: FontWeight.bold,
+                      color: Color.fromARGB(255, 255, 255, 255),
+                      )
+                    ),
+
+                    const SizedBox(height: 1),
+
+                    const Text(
+                      'Sem 2 2025/2026',
+                      style: TextStyle(
+                        fontSize: 17,
+                      fontWeight: FontWeight.bold,
+                      color: Color.fromARGB(255, 255, 255, 255),
+                      ),
+                    ),
+
+                    const SizedBox(height: 15),
+
+                    const Text(
+                      'Group 2 Members:',
+                      style: TextStyle(
+                        fontSize: 17,
+                        fontWeight: FontWeight.bold,
+                        color: Color.fromARGB(255, 255, 255, 255),
+                        ),
+                    ),
+                    const SizedBox(height: 5),
+
+                    const Text(
+                      '1. Hardeepak Kaur Mall (225220)',
+                      style: TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.w500,
+                        color: Color.fromARGB(255, 255, 255, 255),
+                        ),
+                    ),
+                    const SizedBox(height: 2),
+
+                    const Text(
+                      '2. Amni Humaira Bt Azham (225547)',
+                      style: TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.w500,
+                        color: Color.fromARGB(255, 255, 255, 255),
+                        ),
+                    ),
+                    const SizedBox(height: 2),
+
+                    const Text(
+                      '3. Damia Nasreen Bt Abdul Aziz (SA00125)',
+                      style: TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.w500,
+                        color: Color.fromARGB(255, 255, 255, 255),
+                        ),
+                    ),
+                    const SizedBox(height: 2),
+
+                                        const Text(
+                      '4. Wang Yihan (218583)',
+                      style: TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.w500,
+                        color: Color.fromARGB(255, 255, 255, 255),
+                        ),
+                    ),
+                    const SizedBox(height: 60),
+
+
+                  ],
                 ),
               ),
-
-              // Navigator
-              Text(
-                'NAVIGATOR',
-                style: TextStyle(
-                  fontSize: 28,
-                  fontWeight: FontWeight.w500,
-                  color: const Color.fromARGB(255, 0, 0, 0),
-                ),
-              ),
-
-              SizedBox(height: 10),
-
-              // Tagline
-              Text(
-                'Navigate • Explore • Go Green',
-                style: TextStyle(
-                  fontSize: 14,
-                  color: Colors.black87,
-                ),
-              ),
-
-              SizedBox(height: 30),
-
-              // Group Info
-              Text(
-                'Developed by Group 2',
-                style: TextStyle(
-                  fontSize: 14,
-                ),
-              ),
-
-              SizedBox(height: 5),
-
-              Text(
-                'SSE3401 Mobile Application Development',
-                style: TextStyle(
-                  fontSize: 12,
-                ),
-              ),
-
-              SizedBox(height: 5),
-
-              Text(
-                'Semester 2 2025/2026',
-                style: TextStyle(
-                  fontSize: 12,
-                ),
-              ),
-            ],
+            ),
           ),
         ),
       ),
