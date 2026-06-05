@@ -4,27 +4,6 @@ import 'package:fsktm_navigator/screens/home_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
-  @override
-  State<SplashScreen> createState() => _SplashScreenState();
-}
-
-class _SplashScreenState extends State<SplashScreen> {
-  @override
-  void initState() {
-    super.initState();
-
-    Timer(
-      const Duration(seconds: 5),
-      () {
-        Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(
-            builder: (context) => const HomeScreen(),
-          ),
-        );
-      },
-    );
-  }
 
   @override
   State<SplashScreen> createState() => _SplashScreenState();
@@ -37,7 +16,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Timer(const Duration(seconds: 5), () {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => HomeScreen()),
+        MaterialPageRoute(builder: (context) => const HomeScreen()),
       );
     });
   }
@@ -48,14 +27,12 @@ class _SplashScreenState extends State<SplashScreen> {
       body: Container(
         width: double.infinity,
         height: double.infinity,
-
         decoration: const BoxDecoration(
           image: DecorationImage(
             image: AssetImage('assets/images/splash_bg.png'),
             fit: BoxFit.cover,
           ),
         ),
-
         child: SafeArea(
           child: SingleChildScrollView(
             child: Center(
@@ -97,7 +74,8 @@ class _SplashScreenState extends State<SplashScreen> {
                         color: Color.fromARGB(221, 0, 0, 0),
                       ),
                     ),
-                   SizedBox(height: MediaQuery.of(context).size.height * 0.27),
+
+                    SizedBox(height: MediaQuery.of(context).size.height * 0.27),
 
                     const Text(
                       'SSE3401 Mobile Application Development',
@@ -106,10 +84,6 @@ class _SplashScreenState extends State<SplashScreen> {
                         fontWeight: FontWeight.bold,
                         color: Color.fromARGB(255, 255, 255, 255),
                       ),
-                        fontSize: 14,
-                      fontWeight: FontWeight.bold,
-                      color: Color.fromARGB(255, 255, 255, 255),
-                      )
                     ),
 
                     const SizedBox(height: 3),
@@ -144,6 +118,7 @@ class _SplashScreenState extends State<SplashScreen> {
                         color: Color.fromARGB(255, 255, 255, 255),
                       ),
                     ),
+
                     const SizedBox(height: 3),
 
                     const Text(
@@ -154,6 +129,7 @@ class _SplashScreenState extends State<SplashScreen> {
                         color: Color.fromARGB(255, 255, 255, 255),
                       ),
                     ),
+
                     const SizedBox(height: 2),
 
                     const Text(
@@ -164,6 +140,7 @@ class _SplashScreenState extends State<SplashScreen> {
                         color: Color.fromARGB(255, 255, 255, 255),
                       ),
                     ),
+
                     const SizedBox(height: 2),
 
                     const Text(
@@ -174,6 +151,7 @@ class _SplashScreenState extends State<SplashScreen> {
                         color: Color.fromARGB(255, 255, 255, 255),
                       ),
                     ),
+
                     const SizedBox(height: 2),
 
                     const Text(
@@ -184,9 +162,8 @@ class _SplashScreenState extends State<SplashScreen> {
                         color: Color.fromARGB(255, 255, 255, 255),
                       ),
                     ),
+
                     const SizedBox(height: 20),
-
-
                   ],
                 ),
               ),

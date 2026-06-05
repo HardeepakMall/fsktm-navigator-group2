@@ -1,50 +1,140 @@
 import 'package:flutter/material.dart';
+import '../models/location_model.dart';
+import '../services/data_service.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  List<Location> allLocations = [];
+  List<Location> filteredLocations = [];
+  TextEditingController searchController = TextEditingController();
+
+  @override
+  void initState() {
+    super.initState();
+    _loadData();
+  }
+
+  // Load the data when the screen initializes
+  Future<void> _loadData() async {
+    final locations = await DataService.loadLocations();
+    setState(() {
+      allLocations = locations;
+    });
+  }
+
+  // Filter logic for the search bar
+  void _runSearch(String enteredKeyword) {
+    List<Location> results = [];
+    if (enteredKeyword.isEmpty) {
+      results = []; // Show nothing if search is empty
+    } else {
+      results = allLocations
+          .where(
+            (location) =>
+                location.name.toLowerCase().contains(
+                  enteredKeyword.toLowerCase(),
+                ) ||
+                location.id.toLowerCase().contains(
+                  enteredKeyword.toLowerCase(),
+                ),
+          )
+          .toList();
+    }
+
+    setState(() {
+      filteredLocations = results;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('FSKTM Navigator'),
+        title: const Text(
+          'FSKTM Navigator',
+          style: TextStyle(color: Colors.white),
+        ),
         backgroundColor: const Color(0xFF005B26), // UPM Green
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
-            // Search Bar Placeholder
+            // Functional Search Bar
             TextField(
+              controller: searchController,
+              onChanged: (value) => _runSearch(value),
               decoration: InputDecoration(
                 hintText: 'Search room, lab, facility...',
                 prefixIcon: const Icon(Icons.search),
+                suffixIcon: searchController.text.isNotEmpty
+                    ? IconButton(
+                        icon: const Icon(Icons.clear),
+                        onPressed: () {
+                          searchController.clear();
+                          _runSearch('');
+                        },
+                      )
+                    : null,
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10),
                 ),
               ),
-              onChanged: (value) {
-                // TODO: Implement search logic here
-              },
             ),
+            const SizedBox(height: 10),
+
+            // Display Search Results dynamically
+            if (filteredLocations.isNotEmpty)
+              ListView.builder(
+                shrinkWrap: true,
+                physics: const NeverScrollableScrollPhysics(),
+                itemCount: filteredLocations.length,
+                itemBuilder: (context, index) {
+                  return Card(
+                    child: ListTile(
+                      title: Text(filteredLocations[index].name),
+                      subtitle: Text(
+                        '${filteredLocations[index].block} - ${filteredLocations[index].floor}',
+                      ),
+                      trailing: const Icon(Icons.arrow_forward_ios, size: 16),
+                      onTap: () {
+                        // TODO: Navigate to Detail Screen
+                      },
+                    ),
+                  );
+                },
+              ),
+
             const SizedBox(height: 20),
 
-            // Faculty Overview Image Placeholder
+            // Faculty Overview Map
             Container(
               height: 150,
-              color: Colors.grey[300],
-              child: const Center(child: Text("Faculty Overview Map")),
+              width: double.infinity,
+              decoration: BoxDecoration(
+                color: Colors.grey[300],
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: const Center(
+                child: Text("Faculty Overview Map (Amni's Task)"),
+              ),
             ),
             const SizedBox(height: 20),
 
             // Block Selection Grid
             GridView.count(
               shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
               crossAxisCount: 3,
               mainAxisSpacing: 10,
               crossAxisSpacing: 10,
               children: [
-                // FIXED: lowercase 'context'
                 _buildBlockButton(context, "Block A"),
                 _buildBlockButton(context, "Block B"),
                 _buildBlockButton(context, "Block C"),
@@ -56,14 +146,24 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-  // FIXED: Capital 'W' for Widget
   Widget _buildBlockButton(BuildContext context, String title) {
     return Card(
+      elevation: 3,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
       child: InkWell(
         onTap: () {
-          /* Navigate to block details */
+          // Navigate to specific block screen
+          Navigator.pushNamed(context, '/block', arguments: title);
         },
-        child: Center(child: Text(title)),
+        child: Center(
+          child: Text(
+            title,
+            style: const TextStyle(
+              fontWeight: FontWeight.bold,
+              color: Color(0xFF005B26),
+            ),
+          ),
+        ),
       ),
     );
   }
