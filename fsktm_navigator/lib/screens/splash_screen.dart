@@ -1,7 +1,30 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:fsktm_navigator/screens/home_screen.dart';
 
-class SplashScreen extends StatelessWidget {
+class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
+  @override
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    super.initState();
+
+    Timer(
+      const Duration(seconds: 5),
+      () {
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const HomeScreen(),
+          ),
+        );
+      },
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +47,7 @@ class SplashScreen extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 24),
                 child: Column(
                   children: [
-                    const SizedBox(height: 70),
+                    const SizedBox(height: 35),
 
                     Image.asset(
                       'assets/images/upm_logo.png',
@@ -61,13 +84,13 @@ class SplashScreen extends StatelessWidget {
                         color: Color.fromARGB(221, 0, 0, 0),
                       ),
                     ),
-                    const SizedBox(height: 250),
+                   SizedBox(height: MediaQuery.of(context).size.height * 0.27),
 
 
                     const Text(
                       'SSE3401 Mobile Application Development',
                       style: TextStyle(
-                        fontSize: 17,
+                        fontSize: 14,
                       fontWeight: FontWeight.bold,
                       color: Color.fromARGB(255, 255, 255, 255),
                       )
@@ -95,7 +118,7 @@ class SplashScreen extends StatelessWidget {
                       ),
                     ),
 
-                    const SizedBox(height: 15),
+                    const SizedBox(height: 30),
 
                     const Text(
                       'Group 2 Members:',
@@ -105,7 +128,7 @@ class SplashScreen extends StatelessWidget {
                         color: Color.fromARGB(255, 255, 255, 255),
                         ),
                     ),
-                    const SizedBox(height: 5),
+                    const SizedBox(height: 3),
 
                     const Text(
                       '1. Hardeepak Kaur Mall (225220)',
@@ -145,7 +168,7 @@ class SplashScreen extends StatelessWidget {
                         color: Color.fromARGB(255, 255, 255, 255),
                         ),
                     ),
-                    const SizedBox(height: 60),
+                    const SizedBox(height: 20),
 
 
                   ],
