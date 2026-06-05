@@ -1,9 +1,30 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import "package:fsktm_navigator/screens/home_screen.dart";
+import 'package:fsktm_navigator/screens/home_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
+  @override
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    super.initState();
+
+    Timer(
+      const Duration(seconds: 5),
+      () {
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const HomeScreen(),
+          ),
+        );
+      },
+    );
+  }
 
   @override
   State<SplashScreen> createState() => _SplashScreenState();
@@ -42,7 +63,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 padding: const EdgeInsets.symmetric(horizontal: 24),
                 child: Column(
                   children: [
-                    const SizedBox(height: 70),
+                    const SizedBox(height: 35),
 
                     Image.asset('assets/images/upm_logo.png', height: 90),
 
@@ -76,7 +97,7 @@ class _SplashScreenState extends State<SplashScreen> {
                         color: Color.fromARGB(221, 0, 0, 0),
                       ),
                     ),
-                    const SizedBox(height: 250),
+                   SizedBox(height: MediaQuery.of(context).size.height * 0.27),
 
                     const Text(
                       'SSE3401 Mobile Application Development',
@@ -85,6 +106,10 @@ class _SplashScreenState extends State<SplashScreen> {
                         fontWeight: FontWeight.bold,
                         color: Color.fromARGB(255, 255, 255, 255),
                       ),
+                        fontSize: 14,
+                      fontWeight: FontWeight.bold,
+                      color: Color.fromARGB(255, 255, 255, 255),
+                      )
                     ),
 
                     const SizedBox(height: 3),
@@ -109,7 +134,7 @@ class _SplashScreenState extends State<SplashScreen> {
                       ),
                     ),
 
-                    const SizedBox(height: 15),
+                    const SizedBox(height: 30),
 
                     const Text(
                       'Group 2 Members:',
@@ -119,7 +144,7 @@ class _SplashScreenState extends State<SplashScreen> {
                         color: Color.fromARGB(255, 255, 255, 255),
                       ),
                     ),
-                    const SizedBox(height: 5),
+                    const SizedBox(height: 3),
 
                     const Text(
                       '1. Hardeepak Kaur Mall (225220)',
@@ -159,7 +184,9 @@ class _SplashScreenState extends State<SplashScreen> {
                         color: Color.fromARGB(255, 255, 255, 255),
                       ),
                     ),
-                    const SizedBox(height: 60),
+                    const SizedBox(height: 20),
+
+
                   ],
                 ),
               ),
