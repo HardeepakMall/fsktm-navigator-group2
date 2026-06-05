@@ -3,7 +3,7 @@ import 'package:fsktm_navigator/screens/splash_screen.dart';
 import 'package:fsktm_navigator/screens/home_screen.dart';
 import 'package:fsktm_navigator/screens/block_screen.dart';
 import 'package:fsktm_navigator/screens/detail_screen.dart';
-
+import 'package:fsktm_navigator/screens/main_navigator.dart';
 
 void main() {
   runApp(const FSKTMNavigatorApp());
@@ -27,6 +27,7 @@ class FSKTMNavigatorApp extends StatelessWidget {
       // Centralized navigation paths
       routes: {
         '/': (context) => SplashScreen(),
+        '/navigator': (context) => MainNavigator(),
         '/home': (context) => HomeScreen(),
         '/block': (context) => BlockScreen(),
         '/details': (context) => DetailScreen(),
