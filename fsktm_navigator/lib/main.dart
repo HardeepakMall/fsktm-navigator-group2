@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'screens/splash_screen.dart';
-import 'screens/home_screen.dart';
-import 'screens/block_screen.dart';
-import 'screens/detail_screen.dart';
+import 'package:fsktm_navigator/screens/splash_screen.dart';
+import 'package:fsktm_navigator/screens/home_screen.dart';
+import 'package:fsktm_navigator/screens/block_screen.dart';
+import 'package:fsktm_navigator/screens/detail_screen.dart';
 
 void main() {
   runApp(const FSKTMNavigatorApp());
@@ -17,17 +17,17 @@ class FSKTMNavigatorApp extends StatelessWidget {
       title: 'FSKTM Navigator',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.maroon, // Adapting to faculty colors
+        primarySwatch: Colors.teal, // Adapting to faculty colors
         useMaterial3: true,
       ),
       // Define the starting screen
       initialRoute: '/',
       // Centralized navigation paths
       routes: {
-        '/': (context) => const SplashScreen(),
-        '/home': (context) => const HomeScreen(),
-        '/block': (context) => const BlockScreen(),
-        '/details': (context) => const DetailScreen(),
+        '/': (context) => SplashScreen(),
+        '/home': (context) => HomeScreen(),
+        '/block': (context) => BlockScreen(),
+        '/details': (context) => DetailScreen(),
       },
     );
   }

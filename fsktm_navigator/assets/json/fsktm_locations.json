@@ -1,0 +1,20 @@
+[
+  {
+    "id": "A101",
+    "name": "Software Engineering Lab 1",
+    "type": "Laboratory",
+    "floor": "Ground Floor",
+    "block": "Block A",
+    "description": "This lab is used for software development and practical sessions.",
+    "imagePath": "assets/images/a101.png"
+  },
+  {
+    "id": "FAC01",
+    "name": "Recycling Corner",
+    "type": "Facility",
+    "floor": "Ground Floor",
+    "block": "Block A",
+    "description": "Recycle to save our environment.",
+    "imagePath": "assets/images/recycle_icon.png"
+  }
+]

@@ -1,7 +1,25 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
+import "package:fsktm_navigator/screens/home_screen.dart";
 
-class SplashScreen extends StatelessWidget {
+class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
+
+  @override
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    super.initState();
+    Timer(const Duration(seconds: 5), () {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => HomeScreen()),
+      );
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -26,10 +44,7 @@ class SplashScreen extends StatelessWidget {
                   children: [
                     const SizedBox(height: 70),
 
-                    Image.asset(
-                      'assets/images/upm_logo.png',
-                      height: 90,
-                    ),
+                    Image.asset('assets/images/upm_logo.png', height: 90),
 
                     const SizedBox(height: 9),
 
@@ -63,14 +78,13 @@ class SplashScreen extends StatelessWidget {
                     ),
                     const SizedBox(height: 250),
 
-
                     const Text(
                       'SSE3401 Mobile Application Development',
                       style: TextStyle(
                         fontSize: 17,
-                      fontWeight: FontWeight.bold,
-                      color: Color.fromARGB(255, 255, 255, 255),
-                      )
+                        fontWeight: FontWeight.bold,
+                        color: Color.fromARGB(255, 255, 255, 255),
+                      ),
                     ),
 
                     const SizedBox(height: 3),
@@ -79,9 +93,9 @@ class SplashScreen extends StatelessWidget {
                       'Lecturer: Ts. Dr. Sufri Muhammad',
                       style: TextStyle(
                         fontSize: 17,
-                      fontWeight: FontWeight.bold,
-                      color: Color.fromARGB(255, 255, 255, 255),
-                      )
+                        fontWeight: FontWeight.bold,
+                        color: Color.fromARGB(255, 255, 255, 255),
+                      ),
                     ),
 
                     const SizedBox(height: 1),
@@ -90,8 +104,8 @@ class SplashScreen extends StatelessWidget {
                       'Sem 2 2025/2026',
                       style: TextStyle(
                         fontSize: 17,
-                      fontWeight: FontWeight.bold,
-                      color: Color.fromARGB(255, 255, 255, 255),
+                        fontWeight: FontWeight.bold,
+                        color: Color.fromARGB(255, 255, 255, 255),
                       ),
                     ),
 
@@ -103,7 +117,7 @@ class SplashScreen extends StatelessWidget {
                         fontSize: 17,
                         fontWeight: FontWeight.bold,
                         color: Color.fromARGB(255, 255, 255, 255),
-                        ),
+                      ),
                     ),
                     const SizedBox(height: 5),
 
@@ -113,7 +127,7 @@ class SplashScreen extends StatelessWidget {
                         fontSize: 15,
                         fontWeight: FontWeight.w500,
                         color: Color.fromARGB(255, 255, 255, 255),
-                        ),
+                      ),
                     ),
                     const SizedBox(height: 2),
 
@@ -123,7 +137,7 @@ class SplashScreen extends StatelessWidget {
                         fontSize: 15,
                         fontWeight: FontWeight.w500,
                         color: Color.fromARGB(255, 255, 255, 255),
-                        ),
+                      ),
                     ),
                     const SizedBox(height: 2),
 
@@ -133,21 +147,19 @@ class SplashScreen extends StatelessWidget {
                         fontSize: 15,
                         fontWeight: FontWeight.w500,
                         color: Color.fromARGB(255, 255, 255, 255),
-                        ),
+                      ),
                     ),
                     const SizedBox(height: 2),
 
-                                        const Text(
+                    const Text(
                       '4. Wang Yihan (218583)',
                       style: TextStyle(
                         fontSize: 15,
                         fontWeight: FontWeight.w500,
                         color: Color.fromARGB(255, 255, 255, 255),
-                        ),
+                      ),
                     ),
                     const SizedBox(height: 60),
-
-
                   ],
                 ),
               ),
