@@ -6,11 +6,11 @@ class GreenAwareness extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFF8FFF7),
+      backgroundColor: const Color.fromARGB(255, 255, 255, 255),
       appBar: AppBar(
-        backgroundColor: const Color(0xFFF8FFF7),
+        backgroundColor: const Color(0xFF005B26),
         elevation: 0,
-        foregroundColor: const Color(0xFF2E7D32),
+        foregroundColor: const Color.fromARGB(255, 255, 255, 255),
         title: const Text(
           'Green Campus',
           style: TextStyle(
@@ -65,27 +65,43 @@ class GreenAwareness extends StatelessWidget {
             const SizedBox(height: 12),
 
             greenTipCard(
+              icon: Icons.phone_android_outlined,
+              title: 'Paperless Navigation',
+              description: 'Reduce paper usage through digital navigation.'
+              '\nReduce paper maps and printed notices'
+              '\nby using digital navigation.'
+            ),
+
+            greenTipCard(
+              icon: Icons.recycling,
+              title: 'Recycling Information',
+              description: 'Recycle responsibly.'
+              '\nSeparate recyclable waste and keep the campus clean.',
+            ),
+
+            greenTipCard(
               icon: Icons.lightbulb_outline,
               title: 'Save Energy',
-              description: 'Turn off lights and AC\nwhen not in use.',
+              description: 'Small actions can reduce energy usage'
+              '\nwithin the faculty.'
+              '\nRemember to switch off lights'
+              '\nand electrical devices when not in use.',
             ),
 
             greenTipCard(
               icon: Icons.water_drop_outlined,
               title: 'Save Water',
-              description: 'Use water wisely.\nEvery drop counts.',
+              description: 'Every drop matters.'
+              '\nUse water wisely and report'
+              '\nleaking taps or pipes.',
             ),
 
             greenTipCard(
-              icon: Icons.article_outlined,
-              title: 'Reduce Paper',
-              description: 'Use digital resources\nand go paperless.',
-            ),
-
-            greenTipCard(
-              icon: Icons.recycling,
-              title: 'Recycle',
-              description: 'Recycle waste and\nkeep the campus clean.',
+              icon: Icons.directions_walk_outlined,
+              title: 'Walk More, Drive Less',
+              description: 'Walk whenever possible.'
+              '\nReduce emissions by walking between'
+              '\nnearby campus buildings.',
             ),
 
             const SizedBox(height: 16),
