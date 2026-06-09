@@ -16,16 +16,16 @@ The FSKTM Navigator is a mobile application developed in Flutter designed to ass
 ## ✅ Job Scope Checklist
 
 ### 1. Lead Developer (Hardeepak)
-- [/] Initialize Flutter project structure.
-- [/] Setup main navigation routing.
-- [/] Develop Home Screen & Search logic.
+- [x] Initialize Flutter project structure.
+- [x] Setup main navigation routing.
+- [x] Develop Home Screen & Search logic.
 - [ ] Manage build process & generate final APK.
-- [ ] Configure data handling architecture (JSON/Firebase).
+- [x] Configure data handling architecture (JSON/Firebase).
 
 ### 2. Frontend Developer (Amni)
-- [/] Implement Splash Screen (Logo, team names, course info).
+- [x] Implement Splash Screen (Logo, team names, course info).
 - [ ] Design and maintain UI/UX consistency across all screens.
-- [ ] Build the Green Awareness Module UI.
+- [x] Build the Green Awareness Module UI.
 - [ ] Ensure full responsiveness for Android devices.
 
 ### 3. Data & Content Integrator (Damia)
@@ -37,7 +37,7 @@ The FSKTM Navigator is a mobile application developed in Flutter designed to ass
 ### 4. Documentation & Presentation Lead (Yihan)
 - [ ] Build detailed views for Rooms, Labs, and Facilities.
 - [ ] Perform full App QA (testing navigation flow and features).
-- [ ] Draft the final Project Report (Introduction, Objectives, Challenges, etc.).
+- [x] Draft the final Project Report (Introduction, Objectives, Challenges, etc.).
 - [ ] Create presentation slides and coordinate the 10–15 minute demo.
 
 ---
