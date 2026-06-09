@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fsktm_navigator/main.dart';
 
 class AboutScreen extends StatelessWidget {
   const AboutScreen({super.key});
@@ -9,8 +10,25 @@ class AboutScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('About', style: TextStyle(color: Colors.white)),
         backgroundColor: const Color(0xFF005B26), // UPM Green
+        //dark mode button
+        actions: [
+          IconButton(
+            icon: Icon(
+              themeNotifier.value == ThemeMode.dark
+                  ? Icons.light_mode
+                  : Icons.dark_mode,
+              color: Colors.white,
+            ),
+            onPressed: () {
+              if (themeNotifier.value == ThemeMode.light) {
+                themeNotifier.value = ThemeMode.dark;
+              } else {
+                themeNotifier.value = ThemeMode.light;
+              }
+            },
+          ),
+        ],
       ),
-      backgroundColor: Colors.grey[100],
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(24.0),
         child: Column(
@@ -20,20 +38,24 @@ class AboutScreen extends StatelessWidget {
             Image.asset('assets/images/upm_logo.png', height: 100),
             const SizedBox(height: 20),
 
-            const Text(
+            Text(
               'FSKTM',
               style: TextStyle(
                 fontSize: 40,
                 fontWeight: FontWeight.bold,
-                color: Color.fromARGB(255, 0, 91, 38),
+                color: Theme.of(context).brightness == Brightness.dark
+                    ? Color(0xFF00A047)
+                    : Color(0xFF005B26),
               ),
             ),
-            const Text(
+            Text(
               'NAVIGATOR',
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.w500,
-                color: Color.fromARGB(255, 0, 170, 71),
+                color: Theme.of(context).brightness == Brightness.dark
+                    ? Color(0xFF00A047)
+                    : Color(0xFF005B26),
               ),
             ),
             const SizedBox(height: 8),
@@ -49,11 +71,11 @@ class AboutScreen extends StatelessWidget {
               width: double.infinity,
               padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
-                color: Colors.white,
+                color: Theme.of(context).cardColor,
                 borderRadius: BorderRadius.circular(12),
                 boxShadow: [BoxShadow(color: Colors.black12, blurRadius: 4)],
               ),
-              child: const Column(
+              child: Column(
                 children: [
                   Text(
                     'SSE3401 Mobile Application Development',
@@ -70,18 +92,20 @@ class AboutScreen extends StatelessWidget {
               ),
             ),
 
-            const SizedBox(height: 20),
+            SizedBox(height: 20),
 
             // Team Members Container
             Container(
               width: double.infinity,
-              padding: const EdgeInsets.all(16),
+              padding: EdgeInsets.all(16),
               decoration: BoxDecoration(
-                color: const Color(0xFF005B26),
+                color: Theme.of(context).brightness == Brightness.dark
+                    ? Color(0xFF00A047)
+                    : Color(0xFF005B26),
                 borderRadius: BorderRadius.circular(12),
                 boxShadow: [BoxShadow(color: Colors.black12, blurRadius: 4)],
               ),
-              child: const Column(
+              child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
