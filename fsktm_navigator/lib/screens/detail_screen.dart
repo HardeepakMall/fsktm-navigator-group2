@@ -10,7 +10,7 @@ class DetailScreen extends StatelessWidget {
         ModalRoute.of(context)!.settings.arguments as Location;
 
     return Scaffold(
-      backgroundColor: const Color(0xFFF8FFF7),
+      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       appBar: AppBar(
         title: Text(
           location.name,
@@ -19,7 +19,7 @@ class DetailScreen extends StatelessWidget {
             fontWeight: FontWeight.bold,
           ),
         ),
-        backgroundColor: const Color(0xFF005B26),
+        backgroundColor: Theme.of(context).primaryColor,
         iconTheme: const IconThemeData(color: Colors.white),
       ),
       body: SingleChildScrollView(
@@ -32,10 +32,12 @@ class DetailScreen extends StatelessWidget {
 
             Text(
               location.name,
-              style: const TextStyle(
+              style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
-                color: Color(0xFF005B26),
+                color: Theme.of(context).brightness == Brightness.dark
+                    ? Color(0xFF00A047)
+                    : Color(0xFF005B26),
               ),
             ),
 
@@ -43,7 +45,7 @@ class DetailScreen extends StatelessWidget {
 
             Text(
               location.type,
-              style: const TextStyle(
+              style: TextStyle(
                 fontSize: 16,
                 color: Colors.black87,
                 fontWeight: FontWeight.w500,
@@ -56,14 +58,16 @@ class DetailScreen extends StatelessWidget {
             _infoCard(Icons.layers, 'Floor', location.floor),
             _infoCard(Icons.category, 'Type', location.type),
 
-            const SizedBox(height: 20),
+            SizedBox(height: 20),
 
-            const Text(
+            Text(
               'Description',
               style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
-                color: Color(0xFF005B26),
+                color: Theme.of(context).brightness == Brightness.dark
+                    ? Color(0xFF00A047)
+                    : Color(0xFF005B26),
               ),
             ),
 
@@ -91,7 +95,7 @@ class DetailScreen extends StatelessWidget {
               width: double.infinity,
               padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
-                color: const Color(0xFFEAF5E5),
+                color: Theme.of(context).cardColor,
                 borderRadius: BorderRadius.circular(14),
               ),
               child: const Row(
@@ -130,7 +134,7 @@ class DetailScreen extends StatelessWidget {
             height: 210,
             width: double.infinity,
             decoration: BoxDecoration(
-              color: const Color(0xFFEAF5E5),
+              color: Theme.of(context).cardColor,
               borderRadius: BorderRadius.circular(16),
             ),
             child: const Column(
