@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fsktm_navigator/screens/green_awareness.dart';
 import 'home_screen.dart';
 
 // Import placeholders (You will create these files next)
@@ -24,7 +25,7 @@ class _MainNavigatorState extends State<MainNavigator> {
     // Placeholders for the other tabs until your team builds them
     const Center(child: Text('Search Screen (To be built)')),
     const Center(child: Text('Map Screen (Optional Bonus)')),
-    const Center(child: Text('Green Campus Module (Amni)')),
+    const GreenAwareness(),
     const AboutScreen(),
   ];
 
