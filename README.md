@@ -35,7 +35,7 @@ The FSKTM Navigator is a mobile application developed in Flutter designed to ass
 - [ ] Verify search accuracy for all rooms/labs.
 
 ### 4. Documentation & Presentation Lead (Yihan)
-- [ ] Build detailed views for Rooms, Labs, and Facilities.
+- [x] Build detailed views for Rooms, Labs, and Facilities.
 - [ ] Perform full App QA (testing navigation flow and features).
 - [x] Draft the final Project Report (Introduction, Objectives, Challenges, etc.).
 - [ ] Create presentation slides and coordinate the 10–15 minute demo.
