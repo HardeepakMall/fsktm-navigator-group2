@@ -151,9 +151,19 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Widget _buildBlockButton(BuildContext context, String title) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
     return Card(
       elevation: 3,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+      color: Theme.of(context).cardColor,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(10),
+        side: BorderSide(
+          color: Theme.of(context).brightness == Brightness.dark
+              ? const Color(0xFF333333)
+              : const Color(0xFFE0E0E0),
+          width: 1.5,
+        ),
+      ),
       child: InkWell(
         onTap: () {
           // Navigate to specific block screen
@@ -162,9 +172,9 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Center(
           child: Text(
             title,
-            style: const TextStyle(
+            style: TextStyle(
               fontWeight: FontWeight.bold,
-              color: Color(0xFF005B26),
+              color: isDark ? const Color(0xFF43A047) : const Color(0xFF005B26),
             ),
           ),
         ),
