@@ -74,6 +74,11 @@ class AboutScreen extends StatelessWidget {
                 color: Theme.of(context).cardColor,
                 borderRadius: BorderRadius.circular(12),
                 boxShadow: [BoxShadow(color: Colors.black12, blurRadius: 4)],
+                border: Border.all(
+                  color: Theme.of(context).brightness == Brightness.dark
+                      ? const Color(0xFF333333)
+                      : const Color(0xFFE0E0E0),
+                ),
               ),
               child: Column(
                 children: [
