@@ -46,7 +46,7 @@ class _MainNavigatorState extends State<MainNavigator> {
         type:
             BottomNavigationBarType.fixed, // Keeps all labels and icons visible
         backgroundColor: Colors.white,
-        selectedItemColor: const Color(0xFF005B26), // UPM Green
+        selectedItemColor: const Color.fromARGB(255, 126, 6, 8), // UPM Maroon
         unselectedItemColor: Colors.grey,
         currentIndex: _selectedIndex,
         onTap: _onItemTapped,
