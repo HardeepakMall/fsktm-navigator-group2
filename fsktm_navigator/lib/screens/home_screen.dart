@@ -60,7 +60,7 @@ class _HomeScreenState extends State<HomeScreen> {
           'FSKTM Navigator',
           style: TextStyle(color: Colors.white),
         ),
-        backgroundColor: const Color(0xFF005B26), // UPM Green
+        backgroundColor: const Color.fromARGB(255, 126, 6, 8), // UPM Maroon
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16.0),
@@ -118,18 +118,16 @@ class _HomeScreenState extends State<HomeScreen> {
             const SizedBox(height: 20),
 
             // Faculty Overview Map
-            Container(
-              height: 150,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                color: Colors.grey[300],
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: const Center(
-                child: Text("Faculty Overview Map (Amni's Task)"),
-              ),
-            ),
-            const SizedBox(height: 20),
+          ClipRRect(
+           borderRadius: BorderRadius.circular(10),
+           child: Image.asset(
+            'assets/images/faculty_overview.png',
+           height: 180,
+           width: double.infinity,
+           fit: BoxFit.cover,
+           ),
+          ),
+            const SizedBox(height: 40),
 
             // Block Selection Grid
             GridView.count(
