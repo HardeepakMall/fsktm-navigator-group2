@@ -18,7 +18,7 @@ class GreenAwareness extends StatelessWidget {
     return Scaffold(
       backgroundColor: backgroundColor,
       appBar: AppBar(
-        backgroundColor: const Color(0xFF005B26),
+        backgroundColor: const Color.fromARGB(255, 126, 6, 8),
         elevation: 0,
         foregroundColor: Colors.white,
         title: const Text(
