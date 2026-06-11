@@ -53,7 +53,7 @@ class FSKTMNavigatorApp extends StatelessWidget {
             '/': (context) => SplashScreen(),
             '/navigator': (context) => MainNavigator(),
             '/home': (context) => HomeScreen(),
-            '/block': (context) => BlockScreenA(),
+            '/block': (context) => BlockScreen(),
             '/details': (context) => DetailScreen(),
           },
         );
