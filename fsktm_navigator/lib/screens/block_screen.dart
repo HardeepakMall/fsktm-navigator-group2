@@ -35,7 +35,7 @@ class BlockScreen extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 24,
                       fontWeight: FontWeight.bold,
-                      color: Color(0xFF2E5E3B),
+                      color: Color.fromARGB(255, 255, 193, 7),
                     ),
                   ),
                 ],
@@ -50,7 +50,7 @@ class BlockScreen extends StatelessWidget {
                     BlockCard(
                       title: "Ground Floor",
                       imagePath: "assets/images/block_a.png",
-                      borderColor: Colors.lightGreen,
+                      borderColor: const Color.fromARGB(255, 255, 193, 7),
                       backgroundColor: Colors.white,
                       titleColor: Colors.black,
                       titleSize: 20, // Smaller text
@@ -61,7 +61,7 @@ class BlockScreen extends StatelessWidget {
                     BlockCard(
                       title: "First Floor",
                       imagePath: "assets/images/block_b.png",
-                      borderColor: Colors.lightGreen,
+                      borderColor: const Color.fromARGB(255, 255, 193, 7),
                       backgroundColor: Colors.white,
                       titleColor: Colors.black,
                       titleSize: 20,
@@ -72,7 +72,7 @@ class BlockScreen extends StatelessWidget {
                     BlockCard(
                       title: "Second Floor",
                       imagePath: "assets/images/block_c.png",
-                      borderColor: Colors.lightGreen,
+                      borderColor: Color.fromARGB(255, 229, 202, 0),
                       backgroundColor: Colors.white,
                       titleColor: Colors.black,
                       titleSize: 20,
@@ -199,7 +199,7 @@ class BlockCard extends StatelessWidget {
                 child: Icon(
                   Icons.chevron_right,
                   size: 30,
-                  color: Colors.green,
+                  color: const Color.fromARGB(255, 255, 193, 7),
                 ),
               ),
             ),
