@@ -197,6 +197,7 @@ class DetailScreen extends StatelessWidget {
       color: Colors.white,
       borderRadius: BorderRadius.circular(14),
       border: Border.all(color: const Color(0xFFE0E0E0)),
+
       boxShadow: [
         BoxShadow(
           color: Colors.black.withOpacity(0.04),
