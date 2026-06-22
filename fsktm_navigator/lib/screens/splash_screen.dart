@@ -80,7 +80,7 @@ class _SplashScreenState extends State<SplashScreen> {
                     const Text(
                       'SSE3401 Mobile Application Development',
                       style: TextStyle(
-                        fontSize: 17,
+                        fontSize: 15,
                         fontWeight: FontWeight.bold,
                         color: Color.fromARGB(255, 255, 255, 255),
                       ),
@@ -91,7 +91,7 @@ class _SplashScreenState extends State<SplashScreen> {
                     const Text(
                       'Lecturer: Ts. Dr. Sufri Muhammad',
                       style: TextStyle(
-                        fontSize: 17,
+                        fontSize: 15,
                         fontWeight: FontWeight.bold,
                         color: Color.fromARGB(255, 255, 255, 255),
                       ),
@@ -102,7 +102,7 @@ class _SplashScreenState extends State<SplashScreen> {
                     const Text(
                       'Sem 2 2025/2026',
                       style: TextStyle(
-                        fontSize: 17,
+                        fontSize: 15,
                         fontWeight: FontWeight.bold,
                         color: Color.fromARGB(255, 255, 255, 255),
                       ),
@@ -113,7 +113,7 @@ class _SplashScreenState extends State<SplashScreen> {
                     const Text(
                       'Group 2 Members:',
                       style: TextStyle(
-                        fontSize: 17,
+                        fontSize: 16,
                         fontWeight: FontWeight.bold,
                         color: Color.fromARGB(255, 255, 255, 255),
                       ),
