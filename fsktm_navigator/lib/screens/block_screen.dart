@@ -5,6 +5,8 @@ class BlockScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final blockName = ModalRoute.of(context)!.settings.arguments as String;
+
     return Scaffold(
       backgroundColor: Colors.white,
 
@@ -29,6 +31,9 @@ class BlockScreen extends StatelessWidget {
                   ),
 
                   const SizedBox(width: 8),
+                  Text(
+                    blockName,
+                    style: const TextStyle(
 
                   const Text(
                     "Block A",
@@ -53,6 +58,13 @@ class BlockScreen extends StatelessWidget {
                       borderColor: const Color.fromARGB(255, 255, 193, 7),
                       backgroundColor: Colors.white,
                       titleColor: Colors.black,
+                      onTap: () {
+                        Navigator.pushNamed(
+                          context,
+                          '/groundFloor',
+                          arguments: blockName,
+                        );
+                      },
                       titleSize: 20, // Smaller text
                     ),
 
@@ -64,6 +76,13 @@ class BlockScreen extends StatelessWidget {
                       borderColor: const Color.fromARGB(255, 255, 193, 7),
                       backgroundColor: Colors.white,
                       titleColor: Colors.black,
+                      onTap: () {
+                        Navigator.pushNamed(
+                          context,
+                          '/firstFloor',
+                          arguments: blockName,
+                        );
+                      },
                       titleSize: 20,
                     ),
 
@@ -75,6 +94,13 @@ class BlockScreen extends StatelessWidget {
                       borderColor: Color.fromARGB(255, 229, 202, 0),
                       backgroundColor: Colors.white,
                       titleColor: Colors.black,
+                      onTap: () {
+                        Navigator.pushNamed(
+                          context,
+                          '/secondFloor',
+                          arguments: blockName,
+                        );
+                      },
                       titleSize: 20,
                     ),
                   ],
@@ -94,6 +120,7 @@ class BlockCard extends StatelessWidget {
   final Color borderColor;
   final Color backgroundColor;
   final Color titleColor;
+  final VoidCallback onTap;
   final double titleSize;
 
   const BlockCard({
@@ -103,12 +130,14 @@ class BlockCard extends StatelessWidget {
     required this.borderColor,
     required this.backgroundColor,
     required this.titleColor,
+    required this.onTap,
     this.titleSize = 20,
   });
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
+      onTap: onTap,
       onTap: () {
         // Navigate to block details
       },
@@ -178,6 +207,10 @@ class BlockCard extends StatelessWidget {
 
                     const Text(
                       "View rooms and facilities",
+                      style: TextStyle(
+                        fontSize: 16,
+                        height: 1.5,
+                        color: Colors.grey,
 
                       style: TextStyle(
                         fontSize: 12,
