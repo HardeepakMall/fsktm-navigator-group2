@@ -56,12 +56,16 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          'FSKTM Navigator',
-          style: TextStyle(color: Colors.white),
+       centerTitle: true,
+       title: const Text(
+        'FSKTM Navigator',
+       style: TextStyle(
+       color: Colors.white,
+       fontWeight: FontWeight.bold,
         ),
-        backgroundColor: const Color(0xFF005B26), // UPM Green
       ),
+        backgroundColor: const Color.fromARGB(255, 126, 6, 8),
+    ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16.0),
         child: Column(
@@ -118,17 +122,15 @@ class _HomeScreenState extends State<HomeScreen> {
             const SizedBox(height: 20),
 
             // Faculty Overview Map
-            Container(
-              height: 150,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                color: Colors.grey[300],
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: const Center(
-                child: Text("Faculty Overview Map (Amni's Task)"),
-              ),
-            ),
+          ClipRRect(
+           borderRadius: BorderRadius.circular(10),
+           child: Image.asset(
+            'assets/images/faculty_overview.png',
+           height: 300,
+           width: double.infinity,
+           fit: BoxFit.cover,
+           ),
+          ),
             const SizedBox(height: 20),
 
             // Block Selection Grid
@@ -174,7 +176,7 @@ class _HomeScreenState extends State<HomeScreen> {
             title,
             style: TextStyle(
               fontWeight: FontWeight.bold,
-              color: isDark ? const Color(0xFF43A047) : const Color(0xFF005B26),
+              color: isDark ? const Color.fromARGB(255, 146, 34, 65) : const Color.fromARGB(255, 91, 0, 20),
             ),
           ),
         ),
