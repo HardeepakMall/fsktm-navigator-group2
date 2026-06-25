@@ -1,0 +1,235 @@
+{
+  "floors": [
+    {
+      "floorName": "Ground Floor",
+      "symbol": "assets/images/Eo_circle_green_letter-g.svg.png",
+      "image": "assets/images/floorplan_gfA.png",
+      "rooms": [
+        {
+          "name": "Dewan Abdul Azim",
+          "type": "Hall",
+          "floor": "Ground Floor",
+          "block": "Block A",
+          "description": "This hall is used for large gatherings and events."
+        },
+        {
+          "name": "Foyer",
+          "type": "Hall",
+          "floor": "Ground Floor",
+          "block": "Block A",
+          "description": "This hall is where social events and ceremonies are held."
+        },
+        {
+          "name": "Postgraduate Laboratory 1",
+          "type": "Laboratory",
+          "floor": "Ground Floor",
+          "block": "Block A",
+          "description": "This laboratory is used for postgraduate research activities."
+        },
+        {
+          "name": "Postgraduate Laboratory 2",
+          "type": "Laboratory",
+          "floor": "Ground Floor",
+          "block": "Block A",
+          "description": "This laboratory is used for postgraduate research activities."
+        },
+        {
+          "name": "Postgrad Hub",
+          "type": "Room",
+          "floor": "Ground Floor",
+          "block": "Block A",
+          "description": "This room is used for postgraduate discussions and study sessions."
+        },
+        {
+          "name": "Putra Smart Classroom",
+          "type": "Room",
+          "floor": "Ground Floor",
+          "block": "Block A",
+          "description": "This is a smart classroom equipped with modern technology."
+        },
+        {
+          "name": "ICT Section",
+          "type": "Room",
+          "floor": "Ground Floor",
+          "block": "Block A",
+          "description": "This room is used for ICT-related activities in faculty."
+        }       
+          ]
+        },
+       {
+          "floorName": "First Floor",
+          "symbol": "assets/images/Eo_circle_green_number-1.svg.png",
+          "image": "assets/images/floorplan_ffA.png",
+          "rooms": [
+        {
+          "name": "Seminar Room A",
+          "type": "Room",
+          "floor": "First Floor",
+          "block": "Block A",
+          "description": "This seminar room is used for conducting classes."
+        },
+        {
+          "name": "ComCil Room",
+          "type": "Room",
+          "floor": "First Floor",
+          "block": "Block A",
+          "description": "This room is where ComCil meetings are held."
+        },
+        {
+          "name": "Information Security",
+          "type": "Room",
+          "floor": "First Floor",
+          "block": "Block A",
+          "description": "This room is designated for information security purposes."
+        },
+        {
+          "name": "FCSIT Quality Assurance Room",
+          "type": "Room",
+          "floor": "First Floor",
+          "block": "Block A",
+          "description": "This room is used for quality assurance activities related to the FCSIT department."
+        },
+        {
+          "name": "Meeting Room A",
+          "type": "Room",
+          "floor": "First Floor",
+          "block": "Block A",
+          "description": "This room is available for meetings and discussions."
+        },
+        {
+          "name": "Lounge",
+          "type": "Facilities",
+          "floor": "First Floor",
+          "block": "Block A",
+          "description": "This is a relaxation area for students and staff."
+        },
+        {
+          "name": "Administrative Officer Room",
+          "type": "Office",
+          "floor": "First Floor",
+          "block": "Block A",
+          "description": "This room is used by administrative officers for their daily operations."
+        },
+        {
+          "name": "Dean's Office",
+          "type": "Office",
+          "floor": "First Floor",
+          "block": "Block A",
+          "description": "This is the office of the Dean."
+        },
+        {
+          "name": "Research and Innovation Unit, Industrial Training and Career Unit",
+          "type": "Room",
+          "floor": "First Floor",
+          "block": "Block A",
+          "description": "This unit is responsible for research and innovation activities."
+        },
+        {
+          "name": "Male Prayer Room",
+          "type": "Facilities",
+          "floor": "First Floor",
+          "block": "Block A",
+          "description": "This is a prayer room for male students and staff."
+        },
+        {
+          "name": "Female Prayer Room",
+          "type": "Facilities",
+          "floor": "First Floor",
+          "block": "Block A",
+          "description": "This is a prayer room for female students and staff."
+        }  
+          ]
+        },
+               {
+          "floorName": "Second Floor",
+          "symbol": "assets/images/Eo_circle_green_number-2.svg.png",
+          "image": "assets/images/floorplan_sfA.png",
+          "rooms": [
+        {
+          "name": "Lecture Room 1 (BK1)",
+          "type": "Room",
+          "floor": "Second Floor",
+          "block": "Block A",
+          "description": "This lecture room is used for conducting classes and research activities."
+        },
+        {
+          "name": "Lecture Room 2 (BK2)",
+          "type": "Room",
+          "floor": "Second Floor",
+          "block": "Block A",
+          "description": "This room is where ComCil meetings are held."
+        },
+        {
+          "name": "Lecture Room 3 (BK3)",
+          "type": "Room",
+          "floor": "Second Floor",
+          "block": "Block A",
+          "description": "This room is designated for information security purposes."
+        },
+        {
+          "name": "Software Engineering",
+          "type": "Room",
+          "floor": "Second Floor",
+          "block": "Block A",
+          "description": "This room is used for quality assurance activities related to the FCSIT department."
+        },
+        {
+          "name": "Human Computer Interaction",
+          "type": "Room",
+          "floor": "Second Floor",
+          "block": "Block A",
+          "description": "This room is available for meetings and discussions."
+        },
+        {
+          "name": "Applied Informatics Laboratory",
+          "type": "Facilities",
+          "floor": "Second Floor",
+          "block": "Block A",
+          "description": "This is a relaxation area for students and staff."
+        },
+        {
+          "name": "Computer Graphics, Vision and Visualisation",
+          "type": "Office",
+          "floor": "Second Floor",
+          "block": "Block A",
+          "description": "This room is used by administrative officers for their daily operations."
+        },
+        {
+          "name": "Digital Information Computation and Retrieval",
+          "type": "Office",
+          "floor": "Second Floor",
+          "block": "Block A",
+          "description": "This is the office of the Dean."
+        },
+        {
+          "name": "Wireless, Mobile and Quantum Computing",
+          "type": "Room",
+          "floor": "Second Floor",
+          "block": "Block A",
+          "description": "This unit is responsible for research and innovation activities."
+        },
+        {
+          "name": "Network, Parellel and Distributed Computing",
+          "type": "Facilities",
+          "floor": "Second Floor",
+          "block": "Block A",
+          "description": "This is a prayer room for male students and staff."
+        },
+        {
+          "name": "Database, Technologies and Applications",
+          "type": "Facilities",
+          "floor": "Second Floor",
+          "block": "Block A",
+          "description": "This is a prayer room for female students and staff."
+        },
+        {
+          "name": "Intelligent Computing",
+          "type": "Facilities",
+          "floor": "Second Floor",
+          "block": "Block A",
+          "description": "This is a prayer room for female students and staff."  
+        }
+          ]
+        }
+      ]
+      }

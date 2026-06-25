@@ -1,26 +1,54 @@
+import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import '../models/floor.dart';
 
-class BlockScreen extends StatelessWidget {
+class BlockScreen extends StatefulWidget {
   const BlockScreen({super.key});
+
+  @override
+  State<BlockScreen> createState() => _BlockScreenState();
+}
+
+class _BlockScreenState extends State<BlockScreen> {
+  List<Floor> floors = [];
+
+  Future<void> loadFloors(String blockName) async {
+    String path;
+
+    if (blockName == 'Block A') {
+      path = 'assets/json/blockA_data.json';
+    } else if (blockName == 'Block B') {
+      path = 'assets/json/blockB_data.json';
+    } else {
+      path = 'assets/json/blockC_data.json';
+    }
+
+    final jsonString = await rootBundle.loadString(path);
+    final data = json.decode(jsonString);
+    floors = (data['floors'] as List).map((e) => Floor.fromJson(e)).toList();
+    setState(() {});
+  }
+
+  @override
+  void initState() {
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
     final blockName = ModalRoute.of(context)!.settings.arguments as String;
-
+    if (floors.isEmpty) {
+      loadFloors(blockName);
+    }
     return Scaffold(
-      backgroundColor: Colors.white,
-
+      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.symmetric(
-            horizontal: 20,
-            vertical: 16,
-          ),
-
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // Header
               Row(
                 children: [
                   IconButton(
@@ -29,81 +57,45 @@ class BlockScreen extends StatelessWidget {
                     },
                     icon: const Icon(Icons.arrow_back_ios_new),
                   ),
-
                   const SizedBox(width: 8),
                   Text(
                     blockName,
                     style: const TextStyle(
-
-                  const Text(
-                    "Block A",
-                    style: TextStyle(
                       fontSize: 24,
                       fontWeight: FontWeight.bold,
-                      color: Color.fromARGB(255, 255, 193, 7),
+                      color: Color(0xFF2E5E3B),
                     ),
                   ),
                 ],
               ),
-
               const SizedBox(height: 24),
-
-              // Cards
               Expanded(
-                child: ListView(
-                  children: const [
-                    BlockCard(
-                      title: "Ground Floor",
-                      imagePath: "assets/images/block_a.png",
-                      borderColor: const Color.fromARGB(255, 255, 193, 7),
-                      backgroundColor: Colors.white,
-                      titleColor: Colors.black,
-                      onTap: () {
-                        Navigator.pushNamed(
-                          context,
-                          '/groundFloor',
-                          arguments: blockName,
-                        );
-                      },
-                      titleSize: 20, // Smaller text
-                    ),
-
-                    SizedBox(height: 20),
-
-                    BlockCard(
-                      title: "First Floor",
-                      imagePath: "assets/images/block_b.png",
-                      borderColor: const Color.fromARGB(255, 255, 193, 7),
-                      backgroundColor: Colors.white,
-                      titleColor: Colors.black,
-                      onTap: () {
-                        Navigator.pushNamed(
-                          context,
-                          '/firstFloor',
-                          arguments: blockName,
-                        );
-                      },
-                      titleSize: 20,
-                    ),
-
-                    SizedBox(height: 20),
-
-                    BlockCard(
-                      title: "Second Floor",
-                      imagePath: "assets/images/block_c.png",
-                      borderColor: Color.fromARGB(255, 229, 202, 0),
-                      backgroundColor: Colors.white,
-                      titleColor: Colors.black,
-                      onTap: () {
-                        Navigator.pushNamed(
-                          context,
-                          '/secondFloor',
-                          arguments: blockName,
-                        );
-                      },
-                      titleSize: 20,
-                    ),
-                  ],
+                child: Expanded(
+                  child: ListView.builder(
+                    itemCount: floors.length,
+                    itemBuilder: (context, index) {
+                      final floor = floors[index];
+                      return Padding(
+                        padding: const EdgeInsets.only(bottom: 20),
+                        child: BlockCard(
+                          title: floor.floorName,
+                          imagePath: floor.symbol,
+                          borderColor: Color.fromARGB(255, 156, 194, 166),
+                          backgroundColor: Theme.of(
+                            context,
+                          ).colorScheme.surfaceContainerHighest,
+                          titleColor: Theme.of(context).colorScheme.onSurface,
+                          onTap: () {
+                            Navigator.pushNamed(
+                              context,
+                              '/floor',
+                              arguments: floor,
+                            );
+                          },
+                        ),
+                      );
+                    },
+                  ),
                 ),
               ),
             ],
@@ -121,7 +113,6 @@ class BlockCard extends StatelessWidget {
   final Color backgroundColor;
   final Color titleColor;
   final VoidCallback onTap;
-  final double titleSize;
 
   const BlockCard({
     super.key,
@@ -131,47 +122,28 @@ class BlockCard extends StatelessWidget {
     required this.backgroundColor,
     required this.titleColor,
     required this.onTap,
-    this.titleSize = 20,
   });
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onTap,
-      onTap: () {
-        // Navigate to block details
-      },
-
       borderRadius: BorderRadius.circular(20),
-
       child: Container(
         height: 170,
-
         padding: const EdgeInsets.all(16),
-
         decoration: BoxDecoration(
           color: backgroundColor,
-
           borderRadius: BorderRadius.circular(20),
-
-          border: Border.all(
-            color: borderColor,
-            width: 1.5,
-          ),
+          border: Border.all(color: borderColor, width: 1.5),
         ),
-
         child: Row(
           children: [
-            // Image
             Container(
               width: 120,
               height: 120,
-
               decoration: BoxDecoration(
-                color: Colors.grey[200],
-
                 borderRadius: BorderRadius.circular(16),
-
                 image: DecorationImage(
                   image: AssetImage(imagePath),
                   fit: BoxFit.cover,
@@ -179,31 +151,26 @@ class BlockCard extends StatelessWidget {
               ),
             ),
 
-            // Text section
             Expanded(
               flex: 3,
-
               child: Padding(
                 padding: const EdgeInsets.symmetric(
                   horizontal: 20,
                   vertical: 16,
                 ),
-
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-
                   children: [
                     Text(
                       title,
-
                       style: TextStyle(
-                        fontSize: titleSize, // Customizable size
+                        fontSize: 30,
                         fontWeight: FontWeight.bold,
                         color: titleColor,
                       ),
                     ),
 
-                    const SizedBox(height: 8),
+                    const SizedBox(height: 12),
 
                     const Text(
                       "View rooms and facilities",
@@ -211,10 +178,6 @@ class BlockCard extends StatelessWidget {
                         fontSize: 16,
                         height: 1.5,
                         color: Colors.grey,
-
-                      style: TextStyle(
-                        fontSize: 12,
-                        height: 1.5,
                       ),
                     ),
                   ],
@@ -222,18 +185,19 @@ class BlockCard extends StatelessWidget {
               ),
             ),
 
-            // Arrow icon
             Expanded(
-              flex: 1,
-
-              child: Align(
-                alignment: Alignment.topRight,
-
-                child: Icon(
-                  Icons.chevron_right,
-                  size: 30,
-                  color: const Color.fromARGB(255, 255, 193, 7),
-                ),
+              flex: 2,
+              child: Column(
+                children: [
+                  Align(
+                    alignment: Alignment.topRight,
+                    child: Icon(
+                      Icons.chevron_right,
+                      size: 30,
+                      color: Colors.green[600],
+                    ),
+                  ),
+                ],
               ),
             ),
           ],
