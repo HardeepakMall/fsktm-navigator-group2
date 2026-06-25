@@ -9,7 +9,7 @@ class FloorScreen extends StatelessWidget {
     final floor = ModalRoute.of(context)!.settings.arguments as Floor;
 
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
 
       body: SafeArea(
         child: SingleChildScrollView(
@@ -65,12 +65,15 @@ class FloorScreen extends StatelessWidget {
                   final room = floor.rooms[index];
                   return RoomCard(
                     title: room.name,
-                    backgroundColor: Color(0xFFe8fac8),
-                    titleColor: Colors.black,
+                    backgroundColor:
+                        Theme.of(context).brightness == Brightness.light
+                        ? Color(0xFFe8fac8)
+                        : Theme.of(context).colorScheme.surfaceContainerHighest,
+                    titleColor: Theme.of(context).colorScheme.onSurface,
                     onTap: () {
                       Navigator.pushNamed(
                         context,
-                        '/roomDetails',
+                        '/details',
                         arguments: {
                           'floor': floor.floorName,
                           'room': room.name,

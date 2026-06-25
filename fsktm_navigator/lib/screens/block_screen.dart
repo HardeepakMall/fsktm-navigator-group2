@@ -42,19 +42,13 @@ class _BlockScreenState extends State<BlockScreen> {
       loadFloors(blockName);
     }
     return Scaffold(
-      backgroundColor: Colors.white,
-
+      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.symmetric(
-            horizontal: 20,
-            vertical: 16,
-          ),
-
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // Header
               Row(
                 children: [
                   IconButton(
@@ -63,18 +57,13 @@ class _BlockScreenState extends State<BlockScreen> {
                     },
                     icon: const Icon(Icons.arrow_back_ios_new),
                   ),
-
                   const SizedBox(width: 8),
                   Text(
                     blockName,
                     style: const TextStyle(
-
-                  const Text(
-                    "Block A",
-                    style: TextStyle(
                       fontSize: 24,
                       fontWeight: FontWeight.bold,
-                      color: Color.fromARGB(255, 255, 193, 7),
+                      color: Color(0xFF2E5E3B),
                     ),
                   ),
                 ],
@@ -91,9 +80,11 @@ class _BlockScreenState extends State<BlockScreen> {
                         child: BlockCard(
                           title: floor.floorName,
                           imagePath: floor.symbol,
-                          borderColor: Colors.white,
-                          backgroundColor: Color(0xFFe9d7f7),
-                          titleColor: Colors.black,
+                          borderColor: Color.fromARGB(255, 156, 194, 166),
+                          backgroundColor: Theme.of(
+                            context,
+                          ).colorScheme.surfaceContainerHighest,
+                          titleColor: Theme.of(context).colorScheme.onSurface,
                           onTap: () {
                             Navigator.pushNamed(
                               context,
@@ -122,7 +113,6 @@ class BlockCard extends StatelessWidget {
   final Color backgroundColor;
   final Color titleColor;
   final VoidCallback onTap;
-  final double titleSize;
 
   const BlockCard({
     super.key,
@@ -132,45 +122,28 @@ class BlockCard extends StatelessWidget {
     required this.backgroundColor,
     required this.titleColor,
     required this.onTap,
-    this.titleSize = 20,
   });
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onTap,
-      onTap: () {
-        // Navigate to block details
-      },
-
       borderRadius: BorderRadius.circular(20),
-
       child: Container(
         height: 170,
-
         padding: const EdgeInsets.all(16),
-
         decoration: BoxDecoration(
           color: backgroundColor,
-
           borderRadius: BorderRadius.circular(20),
-
-          border: Border.all(
-            color: borderColor,
-            width: 1.5,
-          ),
+          border: Border.all(color: borderColor, width: 1.5),
         ),
-
         child: Row(
           children: [
-            // Image
             Container(
               width: 120,
               height: 120,
-
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(16),
-
                 image: DecorationImage(
                   image: AssetImage(imagePath),
                   fit: BoxFit.cover,
@@ -178,31 +151,26 @@ class BlockCard extends StatelessWidget {
               ),
             ),
 
-            // Text section
             Expanded(
               flex: 3,
-
               child: Padding(
                 padding: const EdgeInsets.symmetric(
                   horizontal: 20,
                   vertical: 16,
                 ),
-
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-
                   children: [
                     Text(
                       title,
-
                       style: TextStyle(
-                        fontSize: titleSize, // Customizable size
+                        fontSize: 30,
                         fontWeight: FontWeight.bold,
                         color: titleColor,
                       ),
                     ),
 
-                    const SizedBox(height: 8),
+                    const SizedBox(height: 12),
 
                     const Text(
                       "View rooms and facilities",
@@ -210,10 +178,6 @@ class BlockCard extends StatelessWidget {
                         fontSize: 16,
                         height: 1.5,
                         color: Colors.grey,
-
-                      style: TextStyle(
-                        fontSize: 12,
-                        height: 1.5,
                       ),
                     ),
                   ],
@@ -221,18 +185,19 @@ class BlockCard extends StatelessWidget {
               ),
             ),
 
-            // Arrow icon
             Expanded(
-              flex: 1,
-
-              child: Align(
-                alignment: Alignment.topRight,
-
-                child: Icon(
-                  Icons.chevron_right,
-                  size: 30,
-                  color: const Color.fromARGB(255, 255, 193, 7),
-                ),
+              flex: 2,
+              child: Column(
+                children: [
+                  Align(
+                    alignment: Alignment.topRight,
+                    child: Icon(
+                      Icons.chevron_right,
+                      size: 30,
+                      color: Colors.green[600],
+                    ),
+                  ),
+                ],
               ),
             ),
           ],
