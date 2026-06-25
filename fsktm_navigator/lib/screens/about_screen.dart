@@ -9,7 +9,7 @@ class AboutScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('About', style: TextStyle(color: Colors.white)),
-        backgroundColor: const Color(0xFF005B26), // UPM Green
+        backgroundColor: const Color.fromARGB(255, 126, 6, 8), // UPM Maroon
         //dark mode button
         actions: [
           IconButton(
@@ -44,8 +44,8 @@ class AboutScreen extends StatelessWidget {
                 fontSize: 40,
                 fontWeight: FontWeight.bold,
                 color: Theme.of(context).brightness == Brightness.dark
-                    ? Color(0xFF00A047)
-                    : Color(0xFF005B26),
+                    ? const Color.fromARGB(255, 164, 18, 62)
+                    : const Color.fromARGB(255, 126, 6, 8),
               ),
             ),
             Text(
@@ -105,8 +105,8 @@ class AboutScreen extends StatelessWidget {
               padding: EdgeInsets.all(16),
               decoration: BoxDecoration(
                 color: Theme.of(context).brightness == Brightness.dark
-                    ? Color(0xFF00A047)
-                    : Color(0xFF005B26),
+                    ? const Color.fromARGB(255, 164, 18, 62)
+                    : const Color.fromARGB(255, 126, 6, 8),
                 borderRadius: BorderRadius.circular(12),
                 boxShadow: [BoxShadow(color: Colors.black12, blurRadius: 4)],
               ),

@@ -56,12 +56,16 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          'FSKTM Navigator',
-          style: TextStyle(color: Colors.white),
+       centerTitle: true,
+       title: const Text(
+        'FSKTM Navigator',
+       style: TextStyle(
+       color: Colors.white,
+       fontWeight: FontWeight.bold,
         ),
-        backgroundColor: const Color(0xFF005B26), // UPM Green
       ),
+        backgroundColor: const Color.fromARGB(255, 126, 6, 8),
+    ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16.0),
         child: Column(
@@ -118,17 +122,15 @@ class _HomeScreenState extends State<HomeScreen> {
             const SizedBox(height: 20),
 
             // Faculty Overview Map
-            Container(
-              height: 150,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                color: Colors.grey[300],
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: const Center(
-                child: Text("Faculty Overview Map (Amni's Task)"),
-              ),
-            ),
+          ClipRRect(
+           borderRadius: BorderRadius.circular(10),
+           child: Image.asset(
+            'assets/images/faculty_overview.png',
+           height: 215,
+           width: 300,
+           fit: BoxFit.cover,
+           ),
+          ),
             const SizedBox(height: 20),
 
             // Block Selection Grid
@@ -139,10 +141,24 @@ class _HomeScreenState extends State<HomeScreen> {
               mainAxisSpacing: 10,
               crossAxisSpacing: 10,
               children: [
-                _buildBlockButton(context, "Block A"),
-                _buildBlockButton(context, "Block B"),
-                _buildBlockButton(context, "Block C"),
-              ],
+         _buildBlockButton(
+              context,
+              "Block A",
+             const Color.fromARGB(255, 255, 193, 7),
+            ),
+
+           _buildBlockButton(
+             context,
+             "Block B",
+           const Color.fromARGB(255, 174, 32, 22),
+          ),
+
+          _buildBlockButton(
+           context,
+           "Block C",
+         const Color.fromARGB(255, 62, 47, 230),
+         ),
+        ],
             ),
           ],
         ),
@@ -150,35 +166,51 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  Widget _buildBlockButton(BuildContext context, String title) {
-    final isDark = Theme.of(context).brightness == Brightness.dark;
-    return Card(
+   Widget _buildBlockButton(
+     BuildContext context,
+     String title,
+     Color color,
+   ) {
+     return Card(
       elevation: 3,
-      color: Theme.of(context).cardColor,
+
+      color: Theme.of(context).brightness == Brightness.dark
+    ? Theme.of(context).cardColor
+    : Color.alphaBlend(
+        color.withOpacity(0.09),
+        Colors.white,
+      ),
+
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(10),
-        side: BorderSide(
-          color: Theme.of(context).brightness == Brightness.dark
-              ? const Color(0xFF333333)
-              : const Color(0xFFE0E0E0),
-          width: 1.5,
-        ),
-      ),
-      child: InkWell(
-        onTap: () {
-          // Navigate to specific block screen
-          Navigator.pushNamed(context, '/block', arguments: title);
-        },
-        child: Center(
-          child: Text(
-            title,
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              color: isDark ? const Color(0xFF43A047) : const Color(0xFF005B26),
-            ),
-          ),
-        ),
-      ),
-    );
-  }
+         borderRadius: BorderRadius.circular(10),
+
+         side: BorderSide(
+           color: color,
+           width: 2,
+         ),
+       ),
+
+       child: InkWell(
+         onTap: () {
+           Navigator.pushNamed(
+             context,
+             '/block',
+             arguments: title,
+           );
+         },
+
+         child: Center(
+           child: Text(
+             title,
+
+             style: TextStyle(
+               fontWeight: FontWeight.bold,
+               fontSize: 16,
+               color: color,
+             ),
+           ),
+         ),
+       ),
+     );
+   }
 }
