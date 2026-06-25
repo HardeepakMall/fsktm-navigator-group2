@@ -1,12 +1,46 @@
+import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import '../models/floor.dart';
 
-class BlockScreen extends StatelessWidget {
+class BlockScreen extends StatefulWidget {
   const BlockScreen({super.key});
+
+  @override
+  State<BlockScreen> createState() => _BlockScreenState();
+}
+
+class _BlockScreenState extends State<BlockScreen> {
+  List<Floor> floors = [];
+
+  Future<void> loadFloors(String blockName) async {
+    String path;
+
+    if (blockName == 'Block A') {
+      path = 'assets/json/blockA_data.json';
+    } else if (blockName == 'Block B') {
+      path = 'assets/json/blockB_data.json';
+    } else {
+      path = 'assets/json/blockC_data.json';
+    }
+
+    final jsonString = await rootBundle.loadString(path);
+    final data = json.decode(jsonString);
+    floors = (data['floors'] as List).map((e) => Floor.fromJson(e)).toList();
+    setState(() {});
+  }
+
+  @override
+  void initState() {
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
     final blockName = ModalRoute.of(context)!.settings.arguments as String;
-
+    if (floors.isEmpty) {
+      loadFloors(blockName);
+    }
     return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(
@@ -34,61 +68,32 @@ class BlockScreen extends StatelessWidget {
                   ),
                 ],
               ),
-
               const SizedBox(height: 24),
-
               Expanded(
-                child: ListView(
-                  children: [
-                    BlockCard(
-                      title: "Ground Floor",
-                      imagePath: "assets/images/block_a.png",
-                      borderColor: Colors.lightGreen,
-                      backgroundColor: Colors.white,
-                      titleColor: Colors.black,
-                      onTap: () {
-                        Navigator.pushNamed(
-                          context,
-                          '/groundFloor',
-                          arguments: blockName,
-                        );
-                      },
-                    ),
-
-                    const SizedBox(height: 20),
-
-                    BlockCard(
-                      title: "First Floor",
-                      imagePath: "assets/images/block_b.png",
-                      borderColor: Colors.lightGreen,
-                      backgroundColor: Colors.white,
-                      titleColor: Colors.black,
-                      onTap: () {
-                        Navigator.pushNamed(
-                          context,
-                          '/firstFloor',
-                          arguments: blockName,
-                        );
-                      },
-                    ),
-
-                    const SizedBox(height: 20),
-
-                    BlockCard(
-                      title: "Second Floor",
-                      imagePath: "assets/images/block_c.png",
-                      borderColor: Colors.lightGreen,
-                      backgroundColor: Colors.white,
-                      titleColor: Colors.black,
-                      onTap: () {
-                        Navigator.pushNamed(
-                          context,
-                          '/secondFloor',
-                          arguments: blockName,
-                        );
-                      },
-                    ),
-                  ],
+                child: Expanded(
+                  child: ListView.builder(
+                    itemCount: floors.length,
+                    itemBuilder: (context, index) {
+                      final floor = floors[index];
+                      return Padding(
+                        padding: const EdgeInsets.only(bottom: 20),
+                        child: BlockCard(
+                          title: floor.floorName,
+                          imagePath: floor.symbol,
+                          borderColor: Colors.white,
+                          backgroundColor: Color(0xFFe9d7f7),
+                          titleColor: Colors.black,
+                          onTap: () {
+                            Navigator.pushNamed(
+                              context,
+                              '/floor',
+                              arguments: floor,
+                            );
+                          },
+                        ),
+                      );
+                    },
+                  ),
                 ),
               ),
             ],
@@ -136,7 +141,6 @@ class BlockCard extends StatelessWidget {
               width: 120,
               height: 120,
               decoration: BoxDecoration(
-                color: Colors.grey[200],
                 borderRadius: BorderRadius.circular(16),
                 image: DecorationImage(
                   image: AssetImage(imagePath),

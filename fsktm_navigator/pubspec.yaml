@@ -63,7 +63,6 @@ flutter:
       - assets/json/
       - assets/images/upm_logo.png
       - assets/images/splash_bg.png
-      - assets/images/floor_plan_gfA.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

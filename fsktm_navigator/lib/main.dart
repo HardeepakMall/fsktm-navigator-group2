@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:fsktm_navigator/screens/floor_screen.dart';
 import 'package:fsktm_navigator/screens/splash_screen.dart';
 import 'package:fsktm_navigator/screens/home_screen.dart';
 import 'package:fsktm_navigator/screens/block_screen.dart';
 import 'package:fsktm_navigator/screens/detail_screen.dart';
 import 'package:fsktm_navigator/screens/main_navigator.dart';
-import 'package:fsktm_navigator/screens/groundfloor_screen.dart';
+import 'package:fsktm_navigator/screens/floor_screen.dart';
 
 final ValueNotifier<ThemeMode> themeNotifier = ValueNotifier(ThemeMode.system);
 
@@ -55,8 +56,8 @@ class FSKTMNavigatorApp extends StatelessWidget {
             '/navigator': (context) => MainNavigator(),
             '/home': (context) => HomeScreen(),
             '/block': (context) => BlockScreen(),
+            '/floor': (context) => FloorScreen(),
             '/details': (context) => DetailScreen(),
-            '/groundFloor': (context) => GroundFloorScreen(),
           },
         );
       },
