@@ -27,7 +27,7 @@ class DetailScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            _buildImage(context, location.imagePath), // Passed context
+            _buildImage(location.imagePath),
             const SizedBox(height: 20),
 
             Text(
@@ -36,8 +36,8 @@ class DetailScreen extends StatelessWidget {
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
                 color: Theme.of(context).brightness == Brightness.dark
-                    ? const Color(0xFF00A047)
-                    : const Color(0xFF005B26),
+                    ? Color(0xFF00A047)
+                    : Color(0xFF005B26),
               ),
             ),
 
@@ -47,22 +47,18 @@ class DetailScreen extends StatelessWidget {
               location.type,
               style: TextStyle(
                 fontSize: 16,
-                // Make this text adapt to dark mode too!
-                color: Theme.of(context).brightness == Brightness.dark
-                    ? Colors.white70
-                    : Colors.black87,
+                color: Colors.black87,
                 fontWeight: FontWeight.w500,
               ),
             ),
 
             const SizedBox(height: 20),
 
-            // Passed 'context' to all the info cards
-            _infoCard(context, Icons.apartment, 'Block', location.block),
-            _infoCard(context, Icons.layers, 'Floor', location.floor),
-            _infoCard(context, Icons.category, 'Type', location.type),
+            _infoCard(Icons.apartment, 'Block', location.block),
+            _infoCard(Icons.layers, 'Floor', location.floor),
+            _infoCard(Icons.category, 'Type', location.type),
 
-            const SizedBox(height: 20),
+            SizedBox(height: 20),
 
             Text(
               'Description',
@@ -70,8 +66,8 @@ class DetailScreen extends StatelessWidget {
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
                 color: Theme.of(context).brightness == Brightness.dark
-                    ? const Color(0xFF00A047)
-                    : const Color(0xFF005B26),
+                    ? Color(0xFF00A047)
+                    : Color(0xFF005B26),
               ),
             ),
 
@@ -80,21 +76,19 @@ class DetailScreen extends StatelessWidget {
             Container(
               width: double.infinity,
               padding: const EdgeInsets.all(16),
-              decoration: _cardDecoration(context), // Passed context
+              decoration: _cardDecoration(),
               child: Text(
                 location.description.isNotEmpty
                     ? location.description
                     : 'No description available yet.',
-                style: TextStyle(
-                  // REMOVED CONST HERE
+                style: const TextStyle(
                   fontSize: 15,
                   height: 1.5,
-                  color: Theme.of(context).brightness == Brightness.dark
-                      ? Colors.white70
-                      : Colors.black87,
+                  color: Colors.black87,
                 ),
               ),
             ),
+            
 
             const SizedBox(height: 20),
 
@@ -104,27 +98,17 @@ class DetailScreen extends StatelessWidget {
               decoration: BoxDecoration(
                 color: Theme.of(context).cardColor,
                 borderRadius: BorderRadius.circular(14),
-                border: Border.all(
-                  color: Theme.of(context).brightness == Brightness.dark
-                      ? const Color(0xFF2E7D32)
-                      : Colors.transparent,
-                ),
               ),
-              child: Row(
+              child: const Row(
                 children: [
-                  const Icon(
-                    Icons.eco,
-                    color: Color(0xFF43A047),
-                  ), // Made icon slightly brighter for dark mode
-                  const SizedBox(width: 12),
+                  Icon(Icons.eco, color: Color(0xFF2E7D32)),
+                  SizedBox(width: 12),
                   Expanded(
                     child: Text(
                       'This digital detail page supports paperless navigation and reduces the need for printed faculty maps.',
                       style: TextStyle(
                         fontSize: 14,
-                        color: Theme.of(context).brightness == Brightness.dark
-                            ? Colors.white70
-                            : const Color(0xFF1B5E20),
+                        color: Color(0xFF1B5E20),
                         fontWeight: FontWeight.w500,
                       ),
                     ),
@@ -138,8 +122,7 @@ class DetailScreen extends StatelessWidget {
     );
   }
 
-  // Added BuildContext here
-  Widget _buildImage(BuildContext context, String imagePath) {
+  Widget _buildImage(String imagePath) {
     return ClipRRect(
       borderRadius: BorderRadius.circular(16),
       child: Image.asset(
@@ -179,18 +162,11 @@ class DetailScreen extends StatelessWidget {
     );
   }
 
-  // Added BuildContext here
-  Widget _infoCard(
-    BuildContext context,
-    IconData icon,
-    String title,
-    String value,
-  ) {
-    final isDark = Theme.of(context).brightness == Brightness.dark;
+  Widget _infoCard(IconData icon, String title, String value) {
     return Container(
       margin: const EdgeInsets.only(bottom: 12),
       padding: const EdgeInsets.all(14),
-      decoration: _cardDecoration(context), // Passed context
+      decoration: _cardDecoration(),
       child: Row(
         children: [
           CircleAvatar(
@@ -200,20 +176,15 @@ class DetailScreen extends StatelessWidget {
           const SizedBox(width: 14),
           Text(
             '$title: ',
-            style: TextStyle(
-              // REMOVED CONST HERE
+            style: const TextStyle(
               fontWeight: FontWeight.bold,
-              // Fixed color logic so it's readable in dark mode
-              color: isDark ? const Color(0xFF43A047) : const Color(0xFF005B26),
+              color: Color(0xFF005B26),
             ),
           ),
           Expanded(
             child: Text(
               value.isNotEmpty ? value : 'Not specified',
-              style: TextStyle(
-                // REMOVED CONST HERE
-                color: isDark ? Colors.white70 : Colors.black87,
-              ),
+              style: const TextStyle(color: Colors.black87),
             ),
           ),
         ],
@@ -221,15 +192,12 @@ class DetailScreen extends StatelessWidget {
     );
   }
 
-  // Added BuildContext here
-  BoxDecoration _cardDecoration(BuildContext context) {
-    final isDark = Theme.of(context).brightness == Brightness.dark;
+  BoxDecoration _cardDecoration() {
     return BoxDecoration(
-      color: isDark ? const Color(0xFF1E1E1E) : Colors.white,
+      color: Colors.white,
       borderRadius: BorderRadius.circular(14),
-      border: Border.all(
-        color: isDark ? const Color(0xFF333333) : const Color(0xFFE0E0E0),
-      ),
+      border: Border.all(color: const Color(0xFFE0E0E0)),
+
       boxShadow: [
         BoxShadow(
           color: Colors.black.withOpacity(0.04),
