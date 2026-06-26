@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../models/floor.dart';
+import '../models/location_model.dart';
 
 class FloorScreen extends StatelessWidget {
   const FloorScreen({super.key});
@@ -71,13 +72,19 @@ class FloorScreen extends StatelessWidget {
                         : Theme.of(context).colorScheme.surfaceContainerHighest,
                     titleColor: Theme.of(context).colorScheme.onSurface,
                     onTap: () {
+                       final location = Location(
+                       id: room.name,
+                       name: room.name,
+                       type: room.type,
+                       floor: room.floor.isNotEmpty ? room.floor : floor.floorName,
+                       block: room.block,
+                       description: room.description,
+                       imagePath: room.imagePath.isNotEmpty ? room.imagePath : floor.image,
+                       );
                       Navigator.pushNamed(
                         context,
                         '/details',
-                        arguments: {
-                          'floor': floor.floorName,
-                          'room': room.name,
-                        },
+                        arguments: location,
                       );
                     },
                   );
