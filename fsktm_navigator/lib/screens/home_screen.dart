@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../models/location_model.dart';
 import '../services/data_service.dart';
+import 'package:fsktm_navigator/main.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -55,17 +56,34 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-       centerTitle: true,
-       title: const Text(
-        'FSKTM Navigator',
-       style: TextStyle(
-       color: Colors.white,
-       fontWeight: FontWeight.bold,
-        ),
-      ),
-        backgroundColor: const Color.fromARGB(255, 126, 6, 8),
+appBar: AppBar(
+  centerTitle: true,
+  title: const Text(
+    'FSKTM Navigator',
+    style: TextStyle(
+      color: Colors.white,
+      fontWeight: FontWeight.bold,
     ),
+  ),
+  backgroundColor: const Color.fromARGB(255, 126, 6, 8),
+  actions: [
+    IconButton(
+      icon: Icon(
+        themeNotifier.value == ThemeMode.dark
+            ? Icons.light_mode
+            : Icons.dark_mode,
+        color: Colors.white,
+      ),
+      onPressed: () {
+        setState(() {
+          themeNotifier.value = themeNotifier.value == ThemeMode.light
+              ? ThemeMode.dark
+              : ThemeMode.light;
+        });
+      },
+    ),
+  ],
+),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16.0),
         child: Column(

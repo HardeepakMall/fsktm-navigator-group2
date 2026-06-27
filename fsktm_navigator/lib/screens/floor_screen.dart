@@ -9,6 +9,22 @@ class FloorScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final floor = ModalRoute.of(context)!.settings.arguments as Floor;
 
+    Color blockColor;
+
+    switch (floor.rooms.first.block) {
+      case 'Block A':
+        blockColor = const Color.fromARGB(255, 255, 193, 7);
+        break;
+      case 'Block B':
+        blockColor = const Color.fromARGB(255, 152, 36, 18);
+        break;
+      case 'Block C':
+        blockColor = const Color.fromARGB(255, 62, 47, 230);
+        break;
+      default:
+        blockColor = const Color(0xFF005B26);
+    }
+
     return Scaffold(
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
 
@@ -31,10 +47,10 @@ class FloorScreen extends StatelessWidget {
                   const SizedBox(width: 8),
                   Text(
                     floor.floorName,
-                    style: const TextStyle(
+                    style: TextStyle(
                       fontSize: 24,
                       fontWeight: FontWeight.bold,
-                      color: Color(0xFF2E5E3B),
+                      color: blockColor,
                     ),
                   ),
                 ],
@@ -57,30 +73,40 @@ class FloorScreen extends StatelessWidget {
                 physics: const NeverScrollableScrollPhysics(),
                 itemCount: floor.rooms.length,
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 3,
+                  crossAxisCount: 2,
                   crossAxisSpacing: 12,
                   mainAxisSpacing: 12,
-                  childAspectRatio: 1.8,
+                  childAspectRatio: 1.6,
                 ),
                 itemBuilder: (context, index) {
                   final room = floor.rooms[index];
+
                   return RoomCard(
                     title: room.name,
                     backgroundColor:
-                        Theme.of(context).brightness == Brightness.light
-                        ? Color(0xFFe8fac8)
-                        : Theme.of(context).colorScheme.surfaceContainerHighest,
-                    titleColor: Theme.of(context).colorScheme.onSurface,
+                        Theme.of(context).brightness == Brightness.dark
+                        ? Theme.of(context).cardColor
+                        : Color.alphaBlend(
+                            blockColor.withOpacity(0.09),
+                            Colors.white,
+                          ),
+                    titleColor: blockColor,
+                    borderColor: blockColor,
                     onTap: () {
-                       final location = Location(
-                       id: room.name,
-                       name: room.name,
-                       type: room.type,
-                       floor: room.floor.isNotEmpty ? room.floor : floor.floorName,
-                       block: room.block,
-                       description: room.description,
-                       imagePath: room.imagePath.isNotEmpty ? room.imagePath : floor.image,
-                       );
+                      final location = Location(
+                        id: room.name,
+                        name: room.name,
+                        type: room.type,
+                        floor: room.floor.isNotEmpty
+                            ? room.floor
+                            : floor.floorName,
+                        block: room.block,
+                        description: room.description,
+                        imagePath: room.imagePath.isNotEmpty
+                            ? room.imagePath
+                            : floor.image,
+                      );
+
                       Navigator.pushNamed(
                         context,
                         '/details',
@@ -102,6 +128,7 @@ class RoomCard extends StatelessWidget {
   final String title;
   final Color backgroundColor;
   final Color titleColor;
+  final Color borderColor;
   final VoidCallback onTap;
 
   const RoomCard({
@@ -109,6 +136,7 @@ class RoomCard extends StatelessWidget {
     required this.title,
     required this.backgroundColor,
     required this.titleColor,
+    required this.borderColor,
     required this.onTap,
   });
 
@@ -122,6 +150,7 @@ class RoomCard extends StatelessWidget {
         decoration: BoxDecoration(
           color: backgroundColor,
           borderRadius: BorderRadius.circular(20),
+          border: Border.all(color: borderColor, width: 1.5),
         ),
         child: Center(
           child: Padding(
