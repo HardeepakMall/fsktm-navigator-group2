@@ -2,7 +2,7 @@
         "floors": [
         {
           "floorName": "Ground Floor",
-          "symbol": "assets/images/Eo_circle_green_letter-g.svg.png",
+          "symbol": "assets/images/red_gfloor_icon.png",
           "image": "assets/images/floorplan_gfB.png",
           "rooms": [
         {
@@ -51,7 +51,7 @@
         },
         {
           "floorName": "First Floor",
-          "symbol":"assets/images/Eo_circle_green_number-1.svg.png",
+          "symbol":"assets/images/red_1floor_icon.png",
           "image": "assets/images/floorplan_ffB.png",
           "rooms": [
         {
@@ -86,7 +86,7 @@
         },
         {
           "floorName": "Second Floor",
-          "symbol":"assets/images/Eo_circle_green_number-2.svg.png",
+          "symbol":"assets/images/red_2floor_icon.png",
           "image": "assets/images/floorplan_sfB.png",
           "rooms": [
 

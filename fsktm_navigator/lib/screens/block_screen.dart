@@ -38,6 +38,21 @@ class _BlockScreenState extends State<BlockScreen> {
   @override
   Widget build(BuildContext context) {
     final blockName = ModalRoute.of(context)!.settings.arguments as String;
+    Color blockColor;
+
+      switch (blockName) {
+        case 'Block A':
+          blockColor = const Color.fromARGB(255, 183, 137, 0); // Yellow
+          break;
+        case 'Block B':
+          blockColor = const Color.fromARGB(255, 174, 32, 22); // Red
+          break;
+        case 'Block C':
+          blockColor = const Color.fromARGB(255, 62, 47, 230); // Blue
+          break;
+        default:
+          blockColor = const Color.fromARGB(255, 129, 0, 0);
+      }
     if (floors.isEmpty) {
       loadFloors(blockName);
     }
@@ -59,13 +74,13 @@ class _BlockScreenState extends State<BlockScreen> {
                   ),
                   const SizedBox(width: 8),
                   Text(
-                    blockName,
-                    style: const TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold,
-                      color: Color(0xFF2E5E3B),
-                    ),
-                  ),
+                blockName,
+                style: TextStyle(
+                 fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  color: blockColor,
+               ),
+              ),
                 ],
               ),
               const SizedBox(height: 24),
@@ -80,11 +95,14 @@ class _BlockScreenState extends State<BlockScreen> {
                         child: BlockCard(
                           title: floor.floorName,
                           imagePath: floor.symbol,
-                          borderColor: Color.fromARGB(255, 156, 194, 166),
-                          backgroundColor: Theme.of(
-                            context,
-                          ).colorScheme.surfaceContainerHighest,
-                          titleColor: Theme.of(context).colorScheme.onSurface,
+                          borderColor: blockColor,
+                          backgroundColor: Theme.of(context).brightness == Brightness.dark
+                            ? Theme.of(context).cardColor
+                          : Color.alphaBlend(
+                          blockColor.withOpacity(0.09),
+                          Colors.white,
+                           ),
+                           titleColor: blockColor,
                           onTap: () {
                             Navigator.pushNamed(
                               context,
@@ -130,8 +148,8 @@ class BlockCard extends StatelessWidget {
       onTap: onTap,
       borderRadius: BorderRadius.circular(20),
       child: Container(
-        height: 170,
-        padding: const EdgeInsets.all(16),
+        height: 130,
+        padding: const EdgeInsets.all(12),
         decoration: BoxDecoration(
           color: backgroundColor,
           borderRadius: BorderRadius.circular(20),
@@ -140,8 +158,8 @@ class BlockCard extends StatelessWidget {
         child: Row(
           children: [
             Container(
-              width: 120,
-              height: 120,
+              width: 90,
+              height: 90,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(16),
                 image: DecorationImage(
@@ -152,10 +170,10 @@ class BlockCard extends StatelessWidget {
             ),
 
             Expanded(
-              flex: 3,
+              flex: 5,
               child: Padding(
                 padding: const EdgeInsets.symmetric(
-                  horizontal: 20,
+                  horizontal: 10,
                   vertical: 16,
                 ),
                 child: Column(
@@ -164,7 +182,7 @@ class BlockCard extends StatelessWidget {
                     Text(
                       title,
                       style: TextStyle(
-                        fontSize: 30,
+                        fontSize: 23,
                         fontWeight: FontWeight.bold,
                         color: titleColor,
                       ),
@@ -175,7 +193,7 @@ class BlockCard extends StatelessWidget {
                     const Text(
                       "View rooms and facilities",
                       style: TextStyle(
-                        fontSize: 16,
+                        fontSize: 12,
                         height: 1.5,
                         color: Colors.grey,
                       ),
@@ -186,15 +204,15 @@ class BlockCard extends StatelessWidget {
             ),
 
             Expanded(
-              flex: 2,
+              flex: 1,
               child: Column(
                 children: [
                   Align(
                     alignment: Alignment.topRight,
                     child: Icon(
                       Icons.chevron_right,
-                      size: 30,
-                      color: Colors.green[600],
+                      size: 15,
+                      color: borderColor,
                     ),
                   ),
                 ],
