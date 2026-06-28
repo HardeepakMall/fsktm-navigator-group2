@@ -10,6 +10,7 @@
           "type": "Hall",
           "floor": "Ground Floor",
           "block": "Block A",
+          "imagePath": "assets/images/rooms/block_a/Dewan_Abdul_Azim.jpg",
           "description": "This hall is used for large gatherings and events."
         },
         {
@@ -17,6 +18,7 @@
           "type": "Hall",
           "floor": "Ground Floor",
           "block": "Block A",
+          "imagePath": "assets/images/rooms/block_a/Foyer.jpg",
           "description": "This hall is where social events and ceremonies are held."
         },
         {
@@ -24,6 +26,7 @@
           "type": "Laboratory",
           "floor": "Ground Floor",
           "block": "Block A",
+          "imagePath": "assets/images/rooms/block_a/Postgraduate_Lab_1.jpg",
           "description": "This laboratory is used for postgraduate research activities."
         },
         {
@@ -31,6 +34,7 @@
           "type": "Laboratory",
           "floor": "Ground Floor",
           "block": "Block A",
+          "imagePath": "assets/images/rooms/block_a/Postgraduate_Lab_2.jpg",
           "description": "This laboratory is used for postgraduate research activities."
         },
         {
@@ -80,13 +84,15 @@
           "type": "Room",
           "floor": "First Floor",
           "block": "Block A",
-          "description": "This room is where ComCil meetings are held."
+          "description": "This room is where ComCil meetings are held.",
+          "imagePath": "assets/images/rooms/block_a/Comcil_Room.jpg"
         },
         {
           "name": "Information Security",
           "type": "Room",
           "floor": "First Floor",
           "block": "Block A",
+          "imagePath": "assets/images/rooms/block_a/Information_Security.jpg",
           "description": "This room is designated for information security purposes."
         },
         {
@@ -115,6 +121,7 @@
           "type": "Office",
           "floor": "First Floor",
           "block": "Block A",
+          "imagePath": "assets/images/rooms/block_a/Admin_Office.jpg",
           "description": "This room is used by administrative officers for their daily operations."
         },
         {
@@ -122,6 +129,7 @@
           "type": "Office",
           "floor": "First Floor",
           "block": "Block A",
+          "imagePath": "assets/images/rooms/block_a/Admin_Office.jpg",
           "description": "This is the office of the Dean."
         },
         {
@@ -136,6 +144,7 @@
           "type": "Prayer Room",
           "floor": "First Floor",
           "block": "Block A",
+          "imagePath": "assets/images/rooms/block_a/Male_Prayer_Room.jpg",
           "description": "This is a prayer room for male students and staff."
         },
         {
@@ -143,6 +152,7 @@
           "type": "Prayer Room",
           "floor": "First Floor",
           "block": "Block A",
+          "imagePath": "assets/images/rooms/block_a/Female_Prayer_Room.jpg",
           "description": "This is a prayer room for female students and staff."
         },
         {
@@ -164,6 +174,7 @@
           "type": "Room",
           "floor": "Second Floor",
           "block": "Block A",
+          "imagePath": "assets/images/rooms/block_a/Lecture Room 1 (BK1).jpg",
           "description": "This lecture room is used for conducting classes and research activities."
         },
         {
@@ -171,6 +182,7 @@
           "type": "Room",
           "floor": "Second Floor",
           "block": "Block A",
+          "imagePath": "assets/images/rooms/block_a/Lecture Room 3 (BK3).jpg",
           "description": "This room is where ComCil meetings are held."
         },
         {
@@ -178,6 +190,7 @@
           "type": "Room",
           "floor": "Second Floor",
           "block": "Block A",
+          "imagePath": "assets/images/rooms/block_a/Lecture Room 3 (BK3).jpg",
           "description": "This room is designated for information security purposes."
         },
         {
@@ -192,6 +205,7 @@
           "type": "Room",
           "floor": "Second Floor",
           "block": "Block A",
+          "imagePath": "assets/images/rooms/block_a/Human Computer Interaction.jpg",
           "description": "This room is available for meetings and discussions."
         },
         {
@@ -199,6 +213,7 @@
           "type": "Facilities",
           "floor": "Second Floor",
           "block": "Block A",
+          "imagePath": "assets/images/rooms/block_a/Applied Informatics Lab.jpg",
           "description": "This is a relaxation area for students and staff."
         },
         {
@@ -206,6 +221,7 @@
           "type": "Office",
           "floor": "Second Floor",
           "block": "Block A",
+          "imagePath": "assets/images/rooms/block_a/Computer Graphics.jpg",
           "description": "This room is used by administrative officers for their daily operations."
         },
         {
@@ -213,6 +229,7 @@
           "type": "Office",
           "floor": "Second Floor",
           "block": "Block A",
+          "imagePath": "assets/images/rooms/block_a/Digital Information Comp. and Retrieval.jpg",
           "description": "This is the office of the Dean."
         },
         {
@@ -227,6 +244,7 @@
           "type": "Facilities",
           "floor": "Second Floor",
           "block": "Block A",
+          "imagePath": "assets/images/rooms/block_a/Network Parallel n Computing.jpg",
           "description": "This is a prayer room for male students and staff."
         },
         {
@@ -234,6 +252,7 @@
           "type": "Facilities",
           "floor": "Second Floor",
           "block": "Block A",
+          "imagePath": "assets/images/rooms/block_a/Database, Technologies and Application.jpg",
           "description": "This is a prayer room for female students and staff."
         },
         {
@@ -241,6 +260,7 @@
           "type": "Facilities",
           "floor": "Second Floor",
           "block": "Block A",
+          "imagePath": "assets/images/rooms/block_a/Intelligent Computing.jpg",
           "description": "This is a prayer room for female students and staff."
         },
         {
