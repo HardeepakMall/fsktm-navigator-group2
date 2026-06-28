@@ -227,6 +227,43 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ],
             ),
+            const SizedBox(height: 28),
+
+            Align(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Facilities',
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: Theme.of(context).brightness == Brightness.dark
+                      ? Colors.white
+                      : const Color.fromARGB(255, 0, 0, 0),
+                ),
+              ),
+            ),
+
+            const SizedBox(height: 12),
+
+            Row(
+              children: [
+                Expanded(
+                  child: _buildFacilityButton(context, 'Toilet', Icons.wc),
+                ),
+                const SizedBox(width: 10),
+                Expanded(
+                  child: _buildFacilityButton(
+                    context,
+                    'Prayer Room',
+                    Icons.mosque,
+                  ),
+                ),
+                const SizedBox(width: 10),
+                Expanded(
+                  child: _buildCafeButton(context, 'Kafe', Icons.restaurant),
+                ),
+              ],
+            ),
           ],
         ),
       ),
@@ -255,6 +292,104 @@ class _HomeScreenState extends State<HomeScreen> {
               fontSize: 16,
               color: color,
             ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildFacilityButton(
+    BuildContext context,
+    String title,
+    IconData icon,
+  ) {
+    return Card(
+      elevation: 3,
+      color: Theme.of(context).brightness == Brightness.dark
+          ? Theme.of(context).cardColor
+          : const Color(0xFFEAF5E5),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(10),
+        side: const BorderSide(color: Color(0xFF005B26), width: 1.5),
+      ),
+      child: InkWell(
+        onTap: () {
+          Navigator.pushNamed(context, '/facilityList', arguments: title);
+        },
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 14),
+          child: Column(
+            children: [
+              Icon(
+                icon,
+                color: const Color.fromARGB(255, 3, 121, 70),
+                size: 28,
+              ),
+              const SizedBox(height: 6),
+              Text(
+                title,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 12,
+                  color: Theme.of(context).brightness == Brightness.dark
+                      ? Colors.white
+                      : const Color(0xFF005B26),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildCafeButton(BuildContext context, String title, IconData icon) {
+    return Card(
+      elevation: 3,
+      color: Theme.of(context).brightness == Brightness.dark
+          ? Theme.of(context).cardColor
+          : const Color(0xFFEAF5E5),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(10),
+        side: const BorderSide(
+          color: Color.fromARGB(255, 3, 121, 70),
+          width: 1.5,
+        ),
+      ),
+      child: InkWell(
+        onTap: () {
+          final cafe = allLocations.firstWhere(
+            (location) =>
+                location.type.toLowerCase() == 'cafeteria' ||
+                location.name.toLowerCase().contains('cafe') ||
+                location.name.toLowerCase().contains('kafe'),
+          );
+
+          Navigator.pushNamed(context, '/details', arguments: cafe);
+        },
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 14),
+          child: Column(
+            children: [
+              Icon(
+                icon,
+                color: const Color.fromARGB(255, 3, 121, 70),
+                size: 28,
+              ),
+              const SizedBox(height: 6),
+              Text(
+                title,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 12,
+                  color: Theme.of(context).brightness == Brightness.dark
+                      ? Colors.white
+                      : const Color(0xFF005B26),
+                ),
+              ),
+            ],
           ),
         ),
       ),

@@ -1,10 +1,10 @@
 {
-        "floors": [
-        {
-          "floorName": "Ground Floor",
-          "symbol": "assets/images/red_gfloor_icon.png",
-          "image": "assets/images/floorplan_gfB.png",
-          "rooms": [
+  "floors": [
+    {
+      "floorName": "Ground Floor",
+      "symbol": "assets/images/red_gfloor_icon.png",
+      "image": "assets/images/floorplan_gfB.png",
+      "rooms": [
         {
           "name": "Network Laboratory 1",
           "type": "Room",
@@ -27,33 +27,47 @@
           "description": "This room is designated for information security purposes."
         },
         {
-            "name": "Forensics Laboratory",
-            "type": "Room",
-            "floor": "Ground Floor",
-            "block": "Block B",
-            "description": "This room is used for quality assurance activities related to the FCSIT department."
-            },
-            {
-            "name": "Software Engineering Laboratory 1",
-            "type": "Room",
-            "floor": "Ground Floor",
-            "block": "Block B",
-            "description": "This room is available for meetings and discussions."
-            },
-            {
-            "name": "Embedded and Robotic Laboratory",
-            "type": "Room",
-            "floor": "Ground Floor",
-            "block": "Block B",
-            "description": "This is a relaxation area for students and staff."
-        }
-        ]
+          "name": "Forensics Laboratory",
+          "type": "Room",
+          "floor": "Ground Floor",
+          "block": "Block B",
+          "description": "This room is used for quality assurance activities related to the FCSIT department."
         },
         {
-          "floorName": "First Floor",
-          "symbol":"assets/images/red_1floor_icon.png",
-          "image": "assets/images/floorplan_ffB.png",
-          "rooms": [
+          "name": "Software Engineering Laboratory 1",
+          "type": "Room",
+          "floor": "Ground Floor",
+          "block": "Block B",
+          "description": "This room is available for meetings and discussions."
+        },
+        {
+          "name": "Embedded and Robotic Laboratory",
+          "type": "Room",
+          "floor": "Ground Floor",
+          "block": "Block B",
+          "description": "This is a relaxation area for students and staff."
+        },
+        {
+          "name": "Toilet",
+          "type": "Toilet",
+          "floor": "Ground Floor",
+          "block": "Block B",
+          "description": "Public restroom available for students, staff, and visitors."
+        },
+        {
+          "name": "FSKTM Cafeteria",
+          "type": "Cafeteria",
+          "floor": "Ground Floor",
+          "block": "Block B",
+          "description": "The faculty cafeteria serving meals, snacks, and beverages. Located along the corridor connecting Block A and Block B."
+        }
+      ]
+    },
+    {
+      "floorName": "First Floor",
+      "symbol": "assets/images/red_1floor_icon.png",
+      "image": "assets/images/floorplan_ffB.png",
+      "rooms": [
         {
           "name": "Software System Laboratory",
           "type": "Room",
@@ -81,15 +95,21 @@
           "floor": "First Floor",
           "block": "Block B",
           "description": "This laboratory is used for forensics research and teaching."
-        }              
-        ]
         },
         {
-          "floorName": "Second Floor",
-          "symbol":"assets/images/red_2floor_icon.png",
-          "image": "assets/images/floorplan_sfB.png",
-          "rooms": [
-
+          "name": "Toilet",
+          "type": "Toilet",
+          "floor": "First Floor",
+          "block": "Block B",
+          "description": "Public restroom available for students, staff, and visitors."
+        }
+      ]
+    },
+    {
+      "floorName": "Second Floor",
+      "symbol": "assets/images/red_2floor_icon.png",
+      "image": "assets/images/floorplan_sfB.png",
+      "rooms": [
         {
           "name": "Multimedia Laboratory 1",
           "type": "Laboratory",
@@ -113,10 +133,10 @@
         },
         {
           "name": "Operation System (OS) Laboratory",
-           "type": "Laboratory",
-            "floor": "Second Floor",
-            "block": "Block B",
-            "description": "This laboratory is used for operating system-related practical sessions."
+          "type": "Laboratory",
+          "floor": "Second Floor",
+          "block": "Block B",
+          "description": "This laboratory is used for operating system-related practical sessions."
         },
         {
           "name": "Al-Khawarizmi Laboratory",
@@ -124,8 +144,15 @@
           "floor": "Second Floor",
           "block": "Block B",
           "description": "This laboratory is named after the famous mathematician Al-Khawarizmi and is used for various practical sessions."
-        }  
-          ]
+        },
+        {
+          "name": "Toilet",
+          "type": "Toilet",
+          "floor": "Second Floor",
+          "block": "Block B",
+          "description": "Public restroom available for students, staff, and visitors."
         }
       ]
     }
+  ]
+}

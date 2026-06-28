@@ -53,14 +53,21 @@
           "floor": "Ground Floor",
           "block": "Block A",
           "description": "This room is used for ICT-related activities in faculty."
-        }       
-          ]
         },
-       {
-          "floorName": "First Floor",
-          "symbol": "assets/images/yellow_1floor_icon.png",
-          "image": "assets/images/floorplan_ffA.png",
-          "rooms": [
+        {
+          "name": "Toilet",
+          "type": "Toilet",
+          "floor": "Ground Floor",
+          "block": "Block A",
+          "description": "Public restroom available for students, staff, and visitors."
+        }
+      ]
+    },
+    {
+      "floorName": "First Floor",
+      "symbol": "assets/images/yellow_1floor_icon.png",
+      "image": "assets/images/floorplan_ffA.png",
+      "rooms": [
         {
           "name": "Seminar Room A",
           "type": "Room",
@@ -126,25 +133,32 @@
         },
         {
           "name": "Male Prayer Room",
-          "type": "Facilities",
+          "type": "Prayer Room",
           "floor": "First Floor",
           "block": "Block A",
           "description": "This is a prayer room for male students and staff."
         },
         {
           "name": "Female Prayer Room",
-          "type": "Facilities",
+          "type": "Prayer Room",
           "floor": "First Floor",
           "block": "Block A",
           "description": "This is a prayer room for female students and staff."
-        }  
-          ]
         },
-               {
-          "floorName": "Second Floor",
-          "symbol": "assets/images/yellow_2floor_icon.png",
-          "image": "assets/images/floorplan_sfA.png",
-          "rooms": [
+        {
+          "name": "Toilet",
+          "type": "Toilet",
+          "floor": "First Floor",
+          "block": "Block A",
+          "description": "Public restroom available for students, staff, and visitors."
+        }
+      ]
+    },
+    {
+      "floorName": "Second Floor",
+      "symbol": "assets/images/yellow_2floor_icon.png",
+      "image": "assets/images/floorplan_sfA.png",
+      "rooms": [
         {
           "name": "Lecture Room 1 (BK1)",
           "type": "Room",
@@ -227,9 +241,16 @@
           "type": "Facilities",
           "floor": "Second Floor",
           "block": "Block A",
-          "description": "This is a prayer room for female students and staff."  
-        }
-          ]
+          "description": "This is a prayer room for female students and staff."
+        },
+        {
+          "name": "Toilet",
+          "type": "Toilet",
+          "floor": "Second Floor",
+          "block": "Block A",
+          "description": "Public restroom available for students, staff, and visitors."
         }
       ]
-      }
+    }
+  ]
+}
