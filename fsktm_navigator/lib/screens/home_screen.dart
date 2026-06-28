@@ -156,8 +156,8 @@ class _HomeScreenState extends State<HomeScreen> {
                           const Color.fromARGB(255, 255, 193, 7),
                           constraints.maxWidth * 0.34,
                           constraints.maxHeight * 0.25,
-                           75,
-                           135,
+                          75,
+                          135,
                         ),
 
                         _mapButton(
@@ -174,9 +174,9 @@ class _HomeScreenState extends State<HomeScreen> {
                           context,
                           'Block C',
                           const Color.fromARGB(255, 62, 47, 230),
-                          constraints.maxWidth * 0.70,
+                          constraints.maxWidth * 0.69,
                           constraints.maxHeight * 0.16,
-                          77,
+                          78,
                           170,
                         ),
                       ],
@@ -186,8 +186,23 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
 
-            const SizedBox(height: 20),
+            const SizedBox(height: 28),
 
+            Align(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Blocks',
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: Theme.of(context).brightness == Brightness.dark
+                      ? Colors.white
+                      : const Color.fromARGB(255, 0, 0, 0),
+                ),
+              ),
+            ),
+
+            const SizedBox(height: 12),
             GridView.count(
               shrinkWrap: true,
               physics: const NeverScrollableScrollPhysics(),
@@ -282,7 +297,5 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
     );
-    
   }
-  
 }
