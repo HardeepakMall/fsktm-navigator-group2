@@ -21,7 +21,6 @@ class _HomeScreenState extends State<HomeScreen> {
     _loadData();
   }
 
-  // Load the data when the screen initializes
   Future<void> _loadData() async {
     final locations = await DataService.loadLocations();
     setState(() {
@@ -29,11 +28,11 @@ class _HomeScreenState extends State<HomeScreen> {
     });
   }
 
-  // Filter logic for the search bar
   void _runSearch(String enteredKeyword) {
     List<Location> results = [];
+
     if (enteredKeyword.isEmpty) {
-      results = []; // Show nothing if search is empty
+      results = [];
     } else {
       results = allLocations
           .where(
@@ -56,39 +55,35 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-appBar: AppBar(
-  centerTitle: true,
-  title: const Text(
-    'FSKTM Navigator',
-    style: TextStyle(
-      color: Colors.white,
-      fontWeight: FontWeight.bold,
-    ),
-  ),
-  backgroundColor: const Color.fromARGB(255, 126, 6, 8),
-  actions: [
-    IconButton(
-      icon: Icon(
-        themeNotifier.value == ThemeMode.dark
-            ? Icons.light_mode
-            : Icons.dark_mode,
-        color: Colors.white,
+      appBar: AppBar(
+        centerTitle: true,
+        title: const Text(
+          'FSKTM Navigator',
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+        ),
+        backgroundColor: const Color.fromARGB(255, 126, 6, 8),
+        actions: [
+          IconButton(
+            icon: Icon(
+              themeNotifier.value == ThemeMode.dark
+                  ? Icons.light_mode
+                  : Icons.dark_mode,
+              color: Colors.white,
+            ),
+            onPressed: () {
+              setState(() {
+                themeNotifier.value = themeNotifier.value == ThemeMode.light
+                    ? ThemeMode.dark
+                    : ThemeMode.light;
+              });
+            },
+          ),
+        ],
       ),
-      onPressed: () {
-        setState(() {
-          themeNotifier.value = themeNotifier.value == ThemeMode.light
-              ? ThemeMode.dark
-              : ThemeMode.light;
-        });
-      },
-    ),
-  ],
-),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
-            // Functional Search Bar
             TextField(
               controller: searchController,
               onChanged: (value) => _runSearch(value),
@@ -109,9 +104,9 @@ appBar: AppBar(
                 ),
               ),
             ),
+
             const SizedBox(height: 10),
 
-            // Display Search Results dynamically
             if (filteredLocations.isNotEmpty)
               ListView.builder(
                 shrinkWrap: true,
@@ -139,19 +134,60 @@ appBar: AppBar(
 
             const SizedBox(height: 20),
 
-            // Faculty Overview Map
-          ClipRRect(
-           borderRadius: BorderRadius.circular(10),
-           child: Image.asset(
-            'assets/images/faculty_overview.png',
-           height: 215,
-           width: 300,
-           fit: BoxFit.cover,
-           ),
-          ),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(10),
+              child: SizedBox(
+                width: 300,
+                height: 215,
+                child: LayoutBuilder(
+                  builder: (context, constraints) {
+                    return Stack(
+                      children: [
+                        Image.asset(
+                          'assets/images/faculty_overview.png',
+                          width: constraints.maxWidth,
+                          height: constraints.maxHeight,
+                          fit: BoxFit.cover,
+                        ),
+
+                        _mapButton(
+                          context,
+                          'Block A',
+                          const Color.fromARGB(255, 255, 193, 7),
+                          constraints.maxWidth * 0.34,
+                          constraints.maxHeight * 0.25,
+                           75,
+                           135,
+                        ),
+
+                        _mapButton(
+                          context,
+                          'Block B',
+                          const Color.fromARGB(255, 174, 32, 22),
+                          constraints.maxWidth * 0.09,
+                          constraints.maxHeight * 0.25,
+                          75,
+                          135,
+                        ),
+
+                        _mapButton(
+                          context,
+                          'Block C',
+                          const Color.fromARGB(255, 62, 47, 230),
+                          constraints.maxWidth * 0.70,
+                          constraints.maxHeight * 0.16,
+                          77,
+                          170,
+                        ),
+                      ],
+                    );
+                  },
+                ),
+              ),
+            ),
+
             const SizedBox(height: 20),
 
-            // Block Selection Grid
             GridView.count(
               shrinkWrap: true,
               physics: const NeverScrollableScrollPhysics(),
@@ -159,24 +195,22 @@ appBar: AppBar(
               mainAxisSpacing: 10,
               crossAxisSpacing: 10,
               children: [
-         _buildBlockButton(
-              context,
-              "Block A",
-             const Color.fromARGB(255, 255, 193, 7),
-            ),
-
-           _buildBlockButton(
-             context,
-             "Block B",
-           const Color.fromARGB(255, 174, 32, 22),
-          ),
-
-          _buildBlockButton(
-           context,
-           "Block C",
-         const Color.fromARGB(255, 62, 47, 230),
-         ),
-        ],
+                _buildBlockButton(
+                  context,
+                  "Block A",
+                  const Color.fromARGB(255, 255, 193, 7),
+                ),
+                _buildBlockButton(
+                  context,
+                  "Block B",
+                  const Color.fromARGB(255, 174, 32, 22),
+                ),
+                _buildBlockButton(
+                  context,
+                  "Block C",
+                  const Color.fromARGB(255, 62, 47, 230),
+                ),
+              ],
             ),
           ],
         ),
@@ -184,51 +218,71 @@ appBar: AppBar(
     );
   }
 
-   Widget _buildBlockButton(
-     BuildContext context,
-     String title,
-     Color color,
-   ) {
-     return Card(
+  Widget _buildBlockButton(BuildContext context, String title, Color color) {
+    return Card(
       elevation: 3,
-
       color: Theme.of(context).brightness == Brightness.dark
-    ? Theme.of(context).cardColor
-    : Color.alphaBlend(
-        color.withOpacity(0.09),
-        Colors.white,
-      ),
-
+          ? Theme.of(context).cardColor
+          : Color.alphaBlend(color.withOpacity(0.09), Colors.white),
       shape: RoundedRectangleBorder(
-         borderRadius: BorderRadius.circular(10),
+        borderRadius: BorderRadius.circular(10),
+        side: BorderSide(color: color, width: 2),
+      ),
+      child: InkWell(
+        onTap: () {
+          Navigator.pushNamed(context, '/block', arguments: title);
+        },
+        child: Center(
+          child: Text(
+            title,
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 16,
+              color: color,
+            ),
+          ),
+        ),
+      ),
+    );
+  }
 
-         side: BorderSide(
-           color: color,
-           width: 2,
-         ),
-       ),
-
-       child: InkWell(
-         onTap: () {
-           Navigator.pushNamed(
-             context,
-             '/block',
-             arguments: title,
-           );
-         },
-
-         child: Center(
-           child: Text(
-             title,
-
-             style: TextStyle(
-               fontWeight: FontWeight.bold,
-               fontSize: 16,
-               color: color,
-             ),
-           ),
-         ),
-       ),
-     );
-   }
+  Widget _mapButton(
+    BuildContext context,
+    String title,
+    Color color,
+    double left,
+    double top,
+    double width,
+    double height,
+  ) {
+    return Positioned(
+      left: left,
+      top: top,
+      child: GestureDetector(
+        onTap: () {
+          Navigator.pushNamed(context, '/block', arguments: title);
+        },
+        child: Container(
+          width: width,
+          height: height,
+          alignment: Alignment.center,
+          decoration: BoxDecoration(
+            color: color,
+            borderRadius: BorderRadius.circular(8),
+            border: Border.all(color: Colors.white, width: 1.5),
+          ),
+          child: Text(
+            title,
+            style: const TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+              fontSize: 11,
+            ),
+          ),
+        ),
+      ),
+    );
+    
+  }
+  
 }
