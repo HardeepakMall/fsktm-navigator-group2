@@ -10,6 +10,7 @@
                               "type": "Room",
                               "floor": "Ground Floor",
                               "block": "Block C",
+                              "imagePath": "assets/images/rooms/block_c/Innovation_Space_(iSPACE).jpg",
                               "description": "This unit is responsible for research and innovation activities."
                         },
                         {
@@ -17,6 +18,7 @@
                               "type": "Room",
                               "floor": "Ground Floor",
                               "block": "Block C",
+                              "imagePath": "assets/images/rooms/block_c/Discussion_Room.png",
                               "description": "This room is used for discussions and meetings."
                         },
                         {
@@ -332,6 +334,7 @@
                               "type": "Toilet",
                               "floor": "Ground Floor",
                               "block": "Block C",
+                              "imagePath": "assets/images/rooms/block_b/Toilet_Block_B.jpg",
                               "description": "Public restroom available for students, staff, and visitors."
                         }
                   ]
@@ -633,6 +636,7 @@
                               "type": "Toilet",
                               "floor": "Second Floor",
                               "block": "Block C",
+                              "imagePath": "assets/images/rooms/block_b/Toilet_Block_B.jpg",
                               "description": "Public restroom available for students, staff, and visitors."
                         }
                   ]
@@ -871,6 +875,7 @@
                               "type": "Toilet",
                               "floor": "Third Floor",
                               "block": "Block C",
+                              "imagePath": "assets/images/rooms/block_b/Toilet_Block_B.jpg",
                               "description": "Public restroom available for students, staff, and visitors."
                         }
                   ]

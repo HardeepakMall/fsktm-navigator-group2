@@ -10,6 +10,7 @@
           "type": "Room",
           "floor": "Ground Floor",
           "block": "Block B",
+          "imagePath": "assets/images/rooms/block_b/Network_Lab_1.jpg",
           "description": "This seminar room is used for conducting classes and research activities."
         },
         {
@@ -17,6 +18,7 @@
           "type": "Room",
           "floor": "Ground Floor",
           "block": "Block B",
+          "imagePath": "assets/images/rooms/block_b/Network_Lab_2.jpg",
           "description": "This room is where ComCil meetings are held."
         },
         {
@@ -24,6 +26,7 @@
           "type": "Room",
           "floor": "Ground Floor",
           "block": "Block B",
+          "imagePath": "assets/images/rooms/block_b/High_Performance_Computing_(HPC)_Lab.jpg",
           "description": "This room is designated for information security purposes."
         },
         {
@@ -31,6 +34,7 @@
           "type": "Room",
           "floor": "Ground Floor",
           "block": "Block B",
+          "imagePath": "assets/images/rooms/block_b/Forensic_Lab.jpg",
           "description": "This room is used for quality assurance activities related to the FCSIT department."
         },
         {
@@ -38,6 +42,7 @@
           "type": "Room",
           "floor": "Ground Floor",
           "block": "Block B",
+          "imagePath": "assets/images/rooms/block_b/Software_Engineering_Lab_1.jpg",
           "description": "This room is available for meetings and discussions."
         },
         {
@@ -45,6 +50,7 @@
           "type": "Room",
           "floor": "Ground Floor",
           "block": "Block B",
+          "imagePath": "assets/images/rooms/block_b/Embedded_and_Robotic_Lab.jpg",
           "description": "This is a relaxation area for students and staff."
         },
         {
@@ -52,6 +58,7 @@
           "type": "Toilet",
           "floor": "Ground Floor",
           "block": "Block B",
+          "imagePath": "assets/images/rooms/block_b/Toilet_Block_B.jpg",
           "description": "Public restroom available for students, staff, and visitors."
         },
         {
@@ -59,6 +66,7 @@
           "type": "Cafeteria",
           "floor": "Ground Floor",
           "block": "Block B",
+          "imagePath": "assets/images/rooms/block_b/Cafeteria.jpg",
           "description": "The faculty cafeteria serving meals, snacks, and beverages. Located along the corridor connecting Block A and Block B."
         }
       ]
@@ -73,6 +81,7 @@
           "type": "Room",
           "floor": "First Floor",
           "block": "Block B",
+          "imagePath": "assets/images/rooms/block_b/Software_System_Lab.jpg",
           "description": "This laboratory is used for network-related research and teaching."
         },
         {
@@ -80,6 +89,7 @@
           "type": "Room",
           "floor": "First Floor",
           "block": "Block B",
+          "imagePath": "assets/images/rooms/block_b/Database_Lab.jpg",
           "description": "This laboratory is used for network-related research and teaching."
         },
         {
@@ -87,6 +97,7 @@
           "type": "Room",
           "floor": "First Floor",
           "block": "Block B",
+          "imagePath": "assets/images/rooms/block_b/Software_Engineering_Lab_2.jpg",
           "description": "This laboratory is used for software engineering research and teaching."
         },
         {
@@ -94,6 +105,7 @@
           "type": "Room",
           "floor": "First Floor",
           "block": "Block B",
+          "imagePath": "assets/images/rooms/block_b/Perdana_Lab.jpg",
           "description": "This laboratory is used for forensics research and teaching."
         },
         {
@@ -101,6 +113,7 @@
           "type": "Toilet",
           "floor": "First Floor",
           "block": "Block B",
+          "imagePath": "assets/images/rooms/block_b/Toilet_Block_B.jpg",
           "description": "Public restroom available for students, staff, and visitors."
         }
       ]
@@ -115,6 +128,7 @@
           "type": "Laboratory",
           "floor": "Second Floor",
           "block": "Block B",
+          "imagePath": "assets/images/rooms/block_b/Multimedia_Lab_1.jpg",
           "description": "This is a multimedia laboratory for practical sessions."
         },
         {
@@ -122,6 +136,7 @@
           "type": "Laboratory",
           "floor": "Second Floor",
           "block": "Block B",
+          "imagePath": "assets/images/rooms/block_b/Multimedia_Lab_2.jpg",
           "description": "This is another multimedia laboratory for practical sessions."
         },
         {
@@ -129,6 +144,7 @@
           "type": "Room",
           "floor": "Second Floor",
           "block": "Block B",
+          "imagePath": "assets/images/rooms/block_b/Multimedia_Studio.jpg",
           "description": "This room is designated for information security purposes."
         },
         {
@@ -136,6 +152,7 @@
           "type": "Laboratory",
           "floor": "Second Floor",
           "block": "Block B",
+          "imagePath": "assets/images/rooms/block_b/Operation_System_Lab.jpg",
           "description": "This laboratory is used for operating system-related practical sessions."
         },
         {
@@ -143,6 +160,7 @@
           "type": "Laboratory",
           "floor": "Second Floor",
           "block": "Block B",
+          "imagePath": "assets/images/rooms/block_b/Al-Khawarizmi_Lab.jpg",
           "description": "This laboratory is named after the famous mathematician Al-Khawarizmi and is used for various practical sessions."
         },
         {
@@ -150,6 +168,7 @@
           "type": "Toilet",
           "floor": "Second Floor",
           "block": "Block B",
+          "imagePath": "assets/images/rooms/block_b/Toilet_Block_B.jpg",
           "description": "Public restroom available for students, staff, and visitors."
         }
       ]

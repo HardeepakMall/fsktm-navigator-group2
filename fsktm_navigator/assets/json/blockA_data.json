@@ -42,6 +42,7 @@
           "type": "Room",
           "floor": "Ground Floor",
           "block": "Block A",
+          "imagePath": "assets/images/rooms/block_a/Postgraduate_Hub.jpg",
           "description": "This room is used for postgraduate discussions and study sessions."
         },
         {
@@ -49,6 +50,7 @@
           "type": "Room",
           "floor": "Ground Floor",
           "block": "Block A",
+          "imagePath": "assets/images/rooms/block_a/Putra_Smart_Classroom.jpg",
           "description": "This is a smart classroom equipped with modern technology."
         },
         {
@@ -63,6 +65,7 @@
           "type": "Toilet",
           "floor": "Ground Floor",
           "block": "Block A",
+          "imagePath": "assets/images/rooms/block_a/Toilet_Block_A.jpg",
           "description": "Public restroom available for students, staff, and visitors."
         }
       ]
@@ -100,6 +103,7 @@
           "type": "Room",
           "floor": "First Floor",
           "block": "Block A",
+          "imagePath": "assets/images/rooms/block_a/FCSIT_Quality_Assurance_Room.jpg",
           "description": "This room is used for quality assurance activities related to the FCSIT department."
         },
         {
@@ -160,6 +164,7 @@
           "type": "Toilet",
           "floor": "First Floor",
           "block": "Block A",
+          "imagePath": "assets/images/rooms/block_a/Toilet_Block_A.jpg",
           "description": "Public restroom available for students, staff, and visitors."
         }
       ]
@@ -198,6 +203,7 @@
           "type": "Room",
           "floor": "Second Floor",
           "block": "Block A",
+          "imagePath": "assets/images/rooms/block_a/Software_Engineering.jpg",
           "description": "This room is used for quality assurance activities related to the FCSIT department."
         },
         {
@@ -237,6 +243,7 @@
           "type": "Room",
           "floor": "Second Floor",
           "block": "Block A",
+          "imagePath": "assets/images/rooms/block_a/Wireless_Mobile_and_Quantum.jpg",
           "description": "This unit is responsible for research and innovation activities."
         },
         {
@@ -268,6 +275,7 @@
           "type": "Toilet",
           "floor": "Second Floor",
           "block": "Block A",
+          "imagePath": "assets/images/rooms/block_a/Toilet_Block_A.jpg",
           "description": "Public restroom available for students, staff, and visitors."
         }
       ]

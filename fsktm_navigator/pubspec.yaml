@@ -62,6 +62,8 @@ flutter:
       - assets/images/
       - assets/json/
       - assets/images/rooms/block_a/
+      - assets/images/rooms/block_b/
+      - assets/images/rooms/block_c/
       - assets/images/upm_logo.png
       - assets/images/splash_bg.png
       - assets/images/blue_1floor_icon.png
