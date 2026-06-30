@@ -1,36 +1,9 @@
 import 'package:flutter/material.dart';
-import '../models/location_model.dart';
-import '../services/data_service.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import '../providers/locations_provider.dart';
 
-class FacilityListScreen extends StatefulWidget {
+class FacilityListScreen extends ConsumerWidget {
   const FacilityListScreen({super.key});
-
-  @override
-  State<FacilityListScreen> createState() => _FacilityListScreenState();
-}
-
-class _FacilityListScreenState extends State<FacilityListScreen> {
-  List<Location> facilities = [];
-
-  @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
-
-    final facilityType = ModalRoute.of(context)!.settings.arguments as String;
-    _loadFacilities(facilityType);
-  }
-
-  Future<void> _loadFacilities(String facilityType) async {
-    final allLocations = await DataService.loadLocations();
-
-    final results = allLocations.where((location) {
-      return location.type.toLowerCase() == facilityType.toLowerCase();
-    }).toList();
-
-    setState(() {
-      facilities = results;
-    });
-  }
 
   Color _getBlockColor(String block) {
     switch (block) {
@@ -46,8 +19,15 @@ class _FacilityListScreenState extends State<FacilityListScreen> {
   }
 
   @override
-  Widget build(BuildContext context) {
-    final facilityType = ModalRoute.of(context)!.settings.arguments as String;
+  Widget build(BuildContext context, WidgetRef ref) {
+    final facilityType =
+        ModalRoute.of(context)!.settings.arguments as String;
+
+    // Get all locations from the shared provider and filter here
+    final allLocations = ref.watch(locationsProvider).value ?? [];
+    final facilities = allLocations.where((location) {
+      return location.type.toLowerCase() == facilityType.toLowerCase();
+    }).toList();
 
     return Scaffold(
       appBar: AppBar(

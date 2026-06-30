@@ -12,6 +12,7 @@ class BlockScreen extends StatefulWidget {
 
 class _BlockScreenState extends State<BlockScreen> {
   List<Floor> floors = [];
+  bool _isLoaded = false;
 
   Future<void> loadFloors(String blockName) async {
     String path;
@@ -26,13 +27,22 @@ class _BlockScreenState extends State<BlockScreen> {
 
     final jsonString = await rootBundle.loadString(path);
     final data = json.decode(jsonString);
-    floors = (data['floors'] as List).map((e) => Floor.fromJson(e)).toList();
-    setState(() {});
+    setState(() {
+      floors = (data['floors'] as List).map((e) => Floor.fromJson(e)).toList();
+    });
   }
 
   @override
-  void initState() {
-    super.initState();
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    // Load only once — didChangeDependencies is the right place to
+    // access route arguments (not available in initState)
+    if (!_isLoaded) {
+      _isLoaded = true;
+      final blockName =
+          ModalRoute.of(context)!.settings.arguments as String;
+      loadFloors(blockName);
+    }
   }
 
   @override
@@ -40,21 +50,27 @@ class _BlockScreenState extends State<BlockScreen> {
     final blockName = ModalRoute.of(context)!.settings.arguments as String;
     Color blockColor;
 
-      switch (blockName) {
-        case 'Block A':
-          blockColor = const Color.fromARGB(255, 183, 137, 0); // Yellow
-          break;
-        case 'Block B':
-          blockColor = const Color.fromARGB(255, 174, 32, 22); // Red
-          break;
-        case 'Block C':
-          blockColor = const Color.fromARGB(255, 62, 47, 230); // Blue
-          break;
-        default:
-          blockColor = const Color.fromARGB(255, 129, 0, 0);
-      }
+    switch (blockName) {
+      case 'Block A':
+        blockColor = const Color.fromARGB(255, 183, 137, 0);
+        break;
+      case 'Block B':
+        blockColor = const Color.fromARGB(255, 174, 32, 22);
+        break;
+      case 'Block C':
+        blockColor = const Color.fromARGB(255, 62, 47, 230);
+        break;
+      default:
+        blockColor = const Color.fromARGB(255, 129, 0, 0);
+    }
+
+    // Show a loading indicator while data is being fetched
     if (floors.isEmpty) {
-      loadFloors(blockName);
+      return Scaffold(
+        body: Center(
+          child: CircularProgressIndicator(color: blockColor),
+        ),
+      );
     }
     return Scaffold(
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,

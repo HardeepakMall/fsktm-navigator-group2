@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:fsktm_navigator/main.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:fsktm_navigator/providers/theme_provider.dart';
 
-class AboutScreen extends StatelessWidget {
+class AboutScreen extends ConsumerWidget {
   const AboutScreen({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
       appBar: AppBar(
         title: const Text('About', style: TextStyle(color: Colors.white)),
@@ -14,17 +15,13 @@ class AboutScreen extends StatelessWidget {
         actions: [
           IconButton(
             icon: Icon(
-              themeNotifier.value == ThemeMode.dark
+              ref.watch(themeProvider) == ThemeMode.dark
                   ? Icons.light_mode
                   : Icons.dark_mode,
               color: Colors.white,
             ),
             onPressed: () {
-              if (themeNotifier.value == ThemeMode.light) {
-                themeNotifier.value = ThemeMode.dark;
-              } else {
-                themeNotifier.value = ThemeMode.light;
-              }
+              ref.read(themeProvider.notifier).toggle();
             },
           ),
         ],

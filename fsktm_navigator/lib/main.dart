@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'providers/theme_provider.dart';
 import 'package:fsktm_navigator/screens/floor_screen.dart';
 import 'package:fsktm_navigator/screens/splash_screen.dart';
 import 'package:fsktm_navigator/screens/home_screen.dart';
@@ -7,20 +9,21 @@ import 'package:fsktm_navigator/screens/detail_screen.dart';
 import 'package:fsktm_navigator/screens/main_navigator.dart';
 import 'package:fsktm_navigator/screens/facility_screen.dart';
 
-final ValueNotifier<ThemeMode> themeNotifier = ValueNotifier(ThemeMode.light);
+
 
 void main() {
-  runApp(const FSKTMNavigatorApp());
+  runApp(const ProviderScope(
+    child: FSKTMNavigatorApp(),
+  ), 
+  ); //providerscope stores all providers so must wrap entire app
 }
 
-class FSKTMNavigatorApp extends StatelessWidget {
+class FSKTMNavigatorApp extends ConsumerWidget {
   const FSKTMNavigatorApp({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return ValueListenableBuilder<ThemeMode>(
-      valueListenable: themeNotifier,
-      builder: (_, ThemeMode currentMode, __) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final currentMode = ref.watch(themeProvider);
         return MaterialApp(
           title: 'FSKTM Navigator',
           debugShowCheckedModeBanner: false,
@@ -58,10 +61,8 @@ class FSKTMNavigatorApp extends StatelessWidget {
             '/block': (context) => BlockScreen(),
             '/floor': (context) => FloorScreen(),
             '/details': (context) => DetailScreen(),
-            '/facilityList': (context) => FacilityListScreen()
+            '/facilityList': (context) => FacilityListScreen(),
           },
         );
-      },
-    );
   }
 }
