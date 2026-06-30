@@ -5,6 +5,7 @@ import 'package:fsktm_navigator/screens/home_screen.dart';
 import 'package:fsktm_navigator/screens/block_screen.dart';
 import 'package:fsktm_navigator/screens/detail_screen.dart';
 import 'package:fsktm_navigator/screens/main_navigator.dart';
+import 'package:fsktm_navigator/screens/facility_screen.dart';
 
 final ValueNotifier<ThemeMode> themeNotifier = ValueNotifier(ThemeMode.light);
 
@@ -57,6 +58,7 @@ class FSKTMNavigatorApp extends StatelessWidget {
             '/block': (context) => BlockScreen(),
             '/floor': (context) => FloorScreen(),
             '/details': (context) => DetailScreen(),
+            '/facilityList': (context) => FacilityListScreen()
           },
         );
       },
