@@ -61,8 +61,25 @@ flutter:
   assets:
       - assets/images/
       - assets/json/
+      - assets/images/rooms/block_a/
+      - assets/images/rooms/block_b/
+      - assets/images/rooms/block_c/
       - assets/images/upm_logo.png
       - assets/images/splash_bg.png
+      - assets/images/blue_1floor_icon.png
+      - assets/images/blue_2floor_icon.png
+      - assets/images/blue_3floor_icon.png
+      - assets/images/blue_gfloor_icon.png
+
+      - assets/images/red_1floor_icon.png
+      - assets/images/red_2floor_icon.png
+      - assets/images/red_3floor_icon.png
+      - assets/images/red_gfloor_icon.png
+
+      - assets/images/yellow_1floor_icon.png
+      - assets/images/yellow_2floor_icon.png
+      - assets/images/yellow_3floor_icon.png
+      - assets/images/yellow_gfloor_icon.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

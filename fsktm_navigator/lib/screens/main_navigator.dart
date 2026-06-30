@@ -23,8 +23,6 @@ class _MainNavigatorState extends State<MainNavigator> {
     const HomeScreen(),
 
     // Placeholders for the other tabs until your team builds them
-    const Center(child: Text('Search Screen (To be built)')),
-    const Center(child: Text('Map Screen (Optional Bonus)')),
     const GreenAwareness(),
     const AboutScreen(),
   ];
@@ -52,8 +50,6 @@ class _MainNavigatorState extends State<MainNavigator> {
         onTap: _onItemTapped,
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-          BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Search'),
-          BottomNavigationBarItem(icon: Icon(Icons.map_outlined), label: 'Map'),
           BottomNavigationBarItem(icon: Icon(Icons.eco), label: 'Green'),
           BottomNavigationBarItem(
             icon: Icon(Icons.info_outline),
