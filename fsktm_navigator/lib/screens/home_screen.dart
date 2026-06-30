@@ -1,34 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../models/location_model.dart';
-import '../services/data_service.dart';
-import 'package:fsktm_navigator/main.dart';
+import '../providers/theme_provider.dart';
+import '../providers/locations_provider.dart';
 
-class HomeScreen extends StatefulWidget {
+class HomeScreen extends ConsumerStatefulWidget {
   const HomeScreen({super.key});
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  ConsumerState<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
-  List<Location> allLocations = [];
+class _HomeScreenState extends ConsumerState<HomeScreen> {
   List<Location> filteredLocations = [];
   TextEditingController searchController = TextEditingController();
 
-  @override
-  void initState() {
-    super.initState();
-    _loadData();
-  }
-
-  Future<void> _loadData() async {
-    final locations = await DataService.loadLocations();
-    setState(() {
-      allLocations = locations;
-    });
-  }
-
   void _runSearch(String enteredKeyword) {
+    // Read the current locations from the provider
+    final allLocations = ref.read(locationsProvider).value ?? [];
     List<Location> results = [];
 
     if (enteredKeyword.isEmpty) {
@@ -54,6 +43,8 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    // Watch the provider so the screen rebuilds when data first loads
+    ref.watch(locationsProvider);
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -65,17 +56,13 @@ class _HomeScreenState extends State<HomeScreen> {
         actions: [
           IconButton(
             icon: Icon(
-              themeNotifier.value == ThemeMode.dark
+              ref.watch(themeProvider) == ThemeMode.dark
                   ? Icons.light_mode
                   : Icons.dark_mode,
               color: Colors.white,
             ),
             onPressed: () {
-              setState(() {
-                themeNotifier.value = themeNotifier.value == ThemeMode.light
-                    ? ThemeMode.dark
-                    : ThemeMode.light;
-              });
+              ref.read(themeProvider.notifier).toggle();
             },
           ),
         ],
@@ -359,12 +346,24 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       child: InkWell(
         onTap: () {
-          final cafe = allLocations.firstWhere(
+          // Safely find cafe — returns null instead of crashing if not found
+          final locations = ref.read(locationsProvider).value ?? [];
+          final cafe = locations.cast<dynamic>().firstWhere(
             (location) =>
                 location.type.toLowerCase() == 'cafeteria' ||
                 location.name.toLowerCase().contains('cafe') ||
                 location.name.toLowerCase().contains('kafe'),
+            orElse: () => null,
           );
+
+          if (cafe == null) {
+            ScaffoldMessenger.of(context).showSnackBar(
+              const SnackBar(
+                content: Text('Cafe information is not available yet.'),
+              ),
+            );
+            return;
+          }
 
           Navigator.pushNamed(context, '/details', arguments: cafe);
         },
