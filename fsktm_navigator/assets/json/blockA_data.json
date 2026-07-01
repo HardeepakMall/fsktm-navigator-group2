@@ -58,6 +58,7 @@
           "type": "Room",
           "floor": "Ground Floor",
           "block": "Block A",
+          "imagePath": "assets/images/rooms/block_a/ict_section.jpg",
           "description": "This room is used for ICT-related activities in faculty."
         },
         {
@@ -80,6 +81,7 @@
           "type": "Room",
           "floor": "First Floor",
           "block": "Block A",
+          "imagePath": "assets/images/rooms/block_a/Seminar_Room_A.jpg",
           "description": "This seminar room is used for conducting classes."
         },
         {
@@ -111,15 +113,10 @@
           "type": "Room",
           "floor": "First Floor",
           "block": "Block A",
+          "imagePath": "assets/images/rooms/block_a/Seminar_Room_A.jpg",
           "description": "This room is available for meetings and discussions."
         },
-        {
-          "name": "Lounge",
-          "type": "Facilities",
-          "floor": "First Floor",
-          "block": "Block A",
-          "description": "This is a relaxation area for students and staff."
-        },
+        
         {
           "name": "Administrative Officer Room",
           "type": "Office",
@@ -135,13 +132,6 @@
           "block": "Block A",
           "imagePath": "assets/images/rooms/block_a/Admin_Office.jpg",
           "description": "This is the office of the Dean."
-        },
-        {
-          "name": "Research and Innovation Unit, Industrial Training and Career Unit",
-          "type": "Room",
-          "floor": "First Floor",
-          "block": "Block A",
-          "description": "This unit is responsible for research and innovation activities."
         },
         {
           "name": "Male Prayer Room",
