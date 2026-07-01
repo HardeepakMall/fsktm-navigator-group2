@@ -26,6 +26,7 @@
                               "type": "Room",
                               "floor": "Ground Floor",
                               "block": "Block C",
+                              "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
                               "description": "This room is available for meetings and discussions."
                         },
                         {
@@ -33,6 +34,7 @@
                               "type": "Room",
                               "floor": "Ground Floor",
                               "block": "Block C",
+                              "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
                               "description": "This room is available for meetings and discussions."
                         },
                         {
@@ -40,6 +42,7 @@
                               "type": "Room",
                               "floor": "Ground Floor",
                               "block": "Block C",
+                              "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
                               "description": "This room is available for meetings and discussions."
                         },
                         {
@@ -47,6 +50,7 @@
                               "type": "Room",
                               "floor": "Ground Floor",
                               "block": "Block C",
+                              "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
                               "description": "This room is available for meetings and discussions."
                         },
                         {
@@ -54,6 +58,7 @@
                               "type": "Room",
                               "floor": "Ground Floor",
                               "block": "Block C",
+                              "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
                               "description": "This room is available for meetings and discussions."
                         },
                         {
@@ -61,6 +66,7 @@
                               "type": "Room",
                               "floor": "Ground Floor",
                               "block": "Block C",
+                              "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
                               "description": "This room is available for meetings and discussions."
                         },
                         {
@@ -68,6 +74,7 @@
                               "type": "Room",
                               "floor": "Ground Floor",
                               "block": "Block C",
+                              "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
                               "description": "This room is available for meetings and discussions."
                         }
                   ]
@@ -80,36 +87,41 @@
                         {
                               "name": "C1-01",
                               "type": "Room",
-                              "floor": "Ground Floor",
+                              "floor": "First Floor",
                               "block": "Block C",
+                              "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
                               "description": "This room is available for meetings and discussions."
                         },
                         {
                               "name": "C1-02",
                               "type": "Room",
-                              "floor": "Ground Floor",
+                              "floor": "First Floor",
                               "block": "Block C",
+                              "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
                               "description": "This room is available for meetings and discussions."
                         },
                         {
                               "name": "C1-03",
                               "type": "Room",
-                              "floor": "Ground Floor",
+                              "floor": "First Floor",
                               "block": "Block C",
+                              "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
                               "description": "This room is available for meetings and discussions."
                         },
                         {
                               "name": "C1-04",
                               "type": "Room",
-                              "floor": "Ground Floor",
+                              "floor": "First Floor",
                               "block": "Block C",
+                              "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
                               "description": "This room is available for meetings and discussions."
                         },
                         {
                               "name": "C1-05",
                               "type": "Room",
-                              "floor": "Ground Floor",
+                              "floor": "First Floor",
                               "block": "Block C",
+                              "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
                               "description": "This room is available for meetings and discussions."
                         },
                         {
@@ -117,6 +129,7 @@
                               "type": "Room",
                               "floor": "Ground Floor",
                               "block": "Block C",
+                              "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
                               "description": "This room is available for meetings and discussions."
                         },
                         {
@@ -124,6 +137,7 @@
                               "type": "Room",
                               "floor": "Ground Floor",
                               "block": "Block C",
+                              "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
                               "description": "This room is available for meetings and discussions."
                         },
                         {
@@ -131,13 +145,15 @@
                               "type": "Room",
                               "floor": "Ground Floor",
                               "block": "Block C",
+                              "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
                               "description": "This room is available for meetings and discussions."
                         },
                         {
                               "name": "C1-09",
                               "type": "Room",
-                              "floor": "Ground Floor",
+                              "floor": "First Floor",
                               "block": "Block C",
+                              "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
                               "description": "This room is available for meetings and discussions."
                         },
                         {
@@ -145,6 +161,7 @@
                               "type": "Room",
                               "floor": "Ground Floor",
                               "block": "Block C",
+                              "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
                               "description": "This room is available for meetings and discussions."
                         },
                         {
@@ -152,6 +169,7 @@
                               "type": "Room",
                               "floor": "Ground Floor",
                               "block": "Block C",
+                              "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
                               "description": "This room is available for meetings and discussions."
                         },
                         {
@@ -159,6 +177,7 @@
                               "type": "Room",
                               "floor": "Ground Floor",
                               "block": "Block C",
+                              "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
                               "description": "This room is available for meetings and discussions."
                         },
                         {
@@ -166,6 +185,7 @@
                               "type": "Room",
                               "floor": "Ground Floor",
                               "block": "Block C",
+                              "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
                               "description": "This room is available for meetings and discussions."
                         },
                         {
@@ -173,6 +193,7 @@
                               "type": "Room",
                               "floor": "Ground Floor",
                               "block": "Block C",
+                              "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
                               "description": "This room is available for meetings and discussions."
                         },
                         {
@@ -180,6 +201,7 @@
                               "type": "Room",
                               "floor": "Ground Floor",
                               "block": "Block C",
+                              "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
                               "description": "This room is available for meetings and discussions."
                         },
                         {
@@ -187,6 +209,7 @@
                               "type": "Room",
                               "floor": "Ground Floor",
                               "block": "Block C",
+                              "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
                               "description": "This room is available for meetings and discussions."
                         },
                         {
@@ -194,6 +217,7 @@
                               "type": "Room",
                               "floor": "Ground Floor",
                               "block": "Block C",
+                              "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
                               "description": "This room is available for meetings and discussions."
                         },
                         {
@@ -201,6 +225,7 @@
                               "type": "Room",
                               "floor": "Ground Floor",
                               "block": "Block C",
+                              "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
                               "description": "This room is available for meetings and discussions."
                         },
                         {
@@ -208,6 +233,7 @@
                               "type": "Room",
                               "floor": "Ground Floor",
                               "block": "Block C",
+                              "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
                               "description": "This room is available for meetings and discussions."
                         },
                         {
@@ -215,6 +241,7 @@
                               "type": "Room",
                               "floor": "Ground Floor",
                               "block": "Block C",
+                              "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
                               "description": "This room is available for meetings and discussions."
                         },
                         {
@@ -222,6 +249,7 @@
                               "type": "Room",
                               "floor": "Ground Floor",
                               "block": "Block C",
+                              "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
                               "description": "This room is available for meetings and discussions."
                         },
                         {
@@ -229,6 +257,7 @@
                               "type": "Room",
                               "floor": "Ground Floor",
                               "block": "Block C",
+                              "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
                               "description": "This room is available for meetings and discussions."
                         },
                         {
@@ -236,6 +265,7 @@
                               "type": "Room",
                               "floor": "Ground Floor",
                               "block": "Block C",
+                              "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
                               "description": "This room is available for meetings and discussions."
                         },
                         {
@@ -243,6 +273,7 @@
                               "type": "Room",
                               "floor": "Ground Floor",
                               "block": "Block C",
+                              "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
                               "description": "This room is available for meetings and discussions."
                         },
                         {
@@ -250,6 +281,7 @@
                               "type": "Room",
                               "floor": "Ground Floor",
                               "block": "Block C",
+                              "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
                               "description": "This room is available for meetings and discussions."
                         },
                         {
@@ -257,6 +289,7 @@
                               "type": "Room",
                               "floor": "Ground Floor",
                               "block": "Block C",
+                              "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
                               "description": "This room is available for meetings and discussions."
                         },
                         {
@@ -264,6 +297,7 @@
                               "type": "Room",
                               "floor": "Ground Floor",
                               "block": "Block C",
+                              "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
                               "description": "This room is available for meetings and discussions."
                         },
                         {
@@ -271,6 +305,7 @@
                               "type": "Room",
                               "floor": "Ground Floor",
                               "block": "Block C",
+                              "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
                               "description": "This room is available for meetings and discussions."
                         },
                         {
@@ -278,6 +313,7 @@
                               "type": "Room",
                               "floor": "Ground Floor",
                               "block": "Block C",
+                              "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
                               "description": "This room is available for meetings and discussions."
                         },
                         {
@@ -285,6 +321,7 @@
                               "type": "Room",
                               "floor": "Ground Floor",
                               "block": "Block C",
+                              "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
                               "description": "This room is available for meetings and discussions."
                         },
                         {
@@ -292,6 +329,7 @@
                               "type": "Room",
                               "floor": "Ground Floor",
                               "block": "Block C",
+                              "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
                               "description": "This room is available for meetings and discussions."
                         },
                         {
@@ -299,6 +337,7 @@
                               "type": "Room",
                               "floor": "Ground Floor",
                               "block": "Block C",
+                              "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
                               "description": "This room is available for meetings and discussions."
                         },
                         {
@@ -306,6 +345,7 @@
                               "type": "Room",
                               "floor": "Ground Floor",
                               "block": "Block C",
+                              "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
                               "description": "This room is available for meetings and discussions."
                         },
                         {
@@ -313,6 +353,7 @@
                               "type": "Room",
                               "floor": "Ground Floor",
                               "block": "Block C",
+                              "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
                               "description": "This room is available for meetings and discussions."
                         },
                         {
@@ -320,6 +361,7 @@
                               "type": "Room",
                               "floor": "Ground Floor",
                               "block": "Block C",
+                              "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
                               "description": "This room is available for meetings and discussions."
                         },
                         {
@@ -327,6 +369,7 @@
                               "type": "Room",
                               "floor": "Ground Floor",
                               "block": "Block C",
+                              "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
                               "description": "This room is available for meetings and discussions."
                         },
                         {
@@ -339,546 +382,623 @@
                         }
                   ]
             },
-            {
-                  "floorName": "Second Floor",
-                  "symbol": "assets/images/blue_2floor_icon.png",
-                  "image": "assets/images/floorplan_c2.jpg",
-                  "rooms": [
-                        {
-                              "name": "C2-01",
-                              "type": "Room",
-                              "floor": "Ground Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "C2-02",
-                              "type": "Room",
-                              "floor": "Ground Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "C2-03",
-                              "type": "Room",
-                              "floor": "Ground Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "C2-04",
-                              "type": "Room",
-                              "floor": "Ground Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "C2-05",
-                              "type": "Room",
-                              "floor": "Ground Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "C2-06",
-                              "type": "Room",
-                              "floor": "Ground Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "C2-07",
-                              "type": "Room",
-                              "floor": "Ground Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "C2-08",
-                              "type": "Room",
-                              "floor": "Ground Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "C2-09",
-                              "type": "Room",
-                              "floor": "Ground Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "C2-10",
-                              "type": "Room",
-                              "floor": "Ground Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "C2-11",
-                              "type": "Room",
-                              "floor": "Second Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "C2-12",
-                              "type": "Room",
-                              "floor": "Second Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "C2-13",
-                              "type": "Room",
-                              "floor": "Second Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "C2-14",
-                              "type": "Room",
-                              "floor": "Second Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "C2-15",
-                              "type": "Room",
-                              "floor": "Second Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "C2-16",
-                              "type": "Room",
-                              "floor": "Second Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "C2-17",
-                              "type": "Room",
-                              "floor": "Second Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "C2-18",
-                              "type": "Room",
-                              "floor": "Second Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "C2-19",
-                              "type": "Room",
-                              "floor": "Second Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "C2-20",
-                              "type": "Room",
-                              "floor": "Second Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "C2-21",
-                              "type": "Room",
-                              "floor": "Second Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "C2-22",
-                              "type": "Room",
-                              "floor": "Second Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "C2-23",
-                              "type": "Room",
-                              "floor": "Second Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "C2-24",
-                              "type": "Room",
-                              "floor": "Second Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "C2-25",
-                              "type": "Room",
-                              "floor": "Second Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "C2-26",
-                              "type": "Room",
-                              "floor": "Second Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "C2-27",
-                              "type": "Room",
-                              "floor": "Second Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "C2-28",
-                              "type": "Room",
-                              "floor": "Second Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "C2-29",
-                              "type": "Room",
-                              "floor": "Second Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "C2-30",
-                              "type": "Room",
-                              "floor": "Second Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "C2-31 & C2-32 (Printing Room)",
-                              "type": "Room",
-                              "floor": "Second Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "C2-33 (Vault)",
-                              "type": "Room",
-                              "floor": "Second Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "C2-34 (Document Room)",
-                              "type": "Room",
-                              "floor": "Second Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "C2-35 & C2-36 (File Room)",
-                              "type": "Room",
-                              "floor": "Second Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "C2-44",
-                              "type": "Room",
-                              "floor": "Second Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "C2-45",
-                              "type": "Room",
-                              "floor": "Second Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "C2-46",
-                              "type": "Room",
-                              "floor": "Second Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "C2-47",
-                              "type": "Room",
-                              "floor": "Second Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "C2-47A",
-                              "type": "Room",
-                              "floor": "Second Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "C2-46A",
-                              "type": "Room",
-                              "floor": "Second Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "Meeting Room",
-                              "type": "Room",
-                              "floor": "Second Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "Toilet",
-                              "type": "Toilet",
-                              "floor": "Second Floor",
-                              "block": "Block C",
-                              "imagePath": "assets/images/rooms/block_b/Toilet_Block_B.jpg",
-                              "description": "Public restroom available for students, staff, and visitors."
-                        }
-                  ]
+             
+                  {
+          "floorName": "Second Floor",
+          "symbol": "assets/images/blue_2floor_icon.png",
+          "image": "assets/images/floorplan_c2.jpg",
+          "rooms": [
+             {
+            
+                  "name": "C2-01",
+                  "type": "Room",
+                  "floor": "Second Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This is a lecturer's room."
             },
             {
-                  "floorName": "Third Floor",
-                  "symbol": "assets/images/blue_3floor_icon.png",
-                  "image": "assets/images/floorplan_c3.jpg",
-                  "rooms": [
-                        {
-                              "name": "C3-01",
-                              "type": "Room",
-                              "floor": "Third Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "C3-02",
-                              "type": "Room",
-                              "floor": "Third Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "C3-03",
-                              "type": "Room",
-                              "floor": "Third Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "C3-04",
-                              "type": "Room",
-                              "floor": "Third Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "C3-05",
-                              "type": "Room",
-                              "floor": "Third Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "C3-06",
-                              "type": "Room",
-                              "floor": "Third Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "C3-07",
-                              "type": "Room",
-                              "floor": "Third Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "C3-08",
-                              "type": "Room",
-                              "floor": "Third Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "C3-09",
-                              "type": "Room",
-                              "floor": "Third Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "C3-10",
-                              "type": "Room",
-                              "floor": "Third Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "C3-11",
-                              "type": "Room",
-                              "floor": "Third Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "C3-12",
-                              "type": "Room",
-                              "floor": "Third Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "C3-13",
-                              "type": "Room",
-                              "floor": "Third Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "C3-14",
-                              "type": "Room",
-                              "floor": "Third Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "C3-15",
-                              "type": "Room",
-                              "floor": "Third Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "C3-16",
-                              "type": "Room",
-                              "floor": "Third Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "C3-17",
-                              "type": "Room",
-                              "floor": "Third Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "C3-18",
-                              "type": "Room",
-                              "floor": "Third Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "C3-19",
-                              "type": "Room",
-                              "floor": "Third Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "C3-20",
-                              "type": "Room",
-                              "floor": "Third Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "C3-21",
-                              "type": "Room",
-                              "floor": "Third Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "C3-22",
-                              "type": "Room",
-                              "floor": "Third Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "C3-23",
-                              "type": "Room",
-                              "floor": "Third Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "C3-24",
-                              "type": "Room",
-                              "floor": "Third Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "C3-25",
-                              "type": "Room",
-                              "floor": "Third Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "C3-26",
-                              "type": "Room",
-                              "floor": "Third Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "C3-27",
-                              "type": "Room",
-                              "floor": "Third Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "C3-28",
-                              "type": "Room",
-                              "floor": "Third Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "C3-29",
-                              "type": "Room",
-                              "floor": "Third Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "C3-30",
-                              "type": "Room",
-                              "floor": "Third Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "C3-31",
-                              "type": "Room",
-                              "floor": "Third Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "C3-32",
-                              "type": "Room",
-                              "floor": "Third Floor",
-                              "block": "Block C",
-                              "description": "This room is available for meetings and discussions."
-                        },
-                        {
-                              "name": "Toilet",
-                              "type": "Toilet",
-                              "floor": "Third Floor",
-                              "block": "Block C",
-                              "imagePath": "assets/images/rooms/block_b/Toilet_Block_B.jpg",
-                              "description": "Public restroom available for students, staff, and visitors."
-                        }
-                  ]
+                  "name": "C2-02",
+                  "type": "Room",
+                  "floor": "Second Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This is a lecturer's room."
+            },
+            {
+                  "name": "C2-03",
+                  "type": "Room",
+                  "floor": "Second Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This is a lecturer's room."
+            },
+            {
+                  "name": "C2-04",
+                  "type": "Room",
+                  "floor": "Second Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This is a lecturer's room."
+            },
+            {
+                  "name": "C2-05",
+                  "type": "Room",
+                  "floor": "Second Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This is a lecturer's room."
+            },
+            {
+                  "name": "C2-06",
+                  "type": "Room",
+                  "floor": "Second Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This is a lecturer's room."
+            },
+            {
+                  "name": "C2-07",
+                  "type": "Room",
+                  "floor": "Second Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This is a lecturer's room."
+            },
+            {
+                  "name": "C2-08",
+                  "type": "Room",
+                  "floor": "Second Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This is a lecturer's room."
+            },
+            {
+                  "name": "C2-09",
+                  "type": "Room",
+                  "floor": "Second Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This is a lecturer's room."
+            },
+            {
+                  "name": "C2-10",
+                  "type": "Room",
+                  "floor": "Second Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This is a lecturer's room."
+            },
+            {
+                  "name": "C2-11",
+                  "type": "Room",
+                  "floor": "Second Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This is a lecturer's room."
+            },
+            {
+                  "name": "C2-12",
+                  "type": "Room",
+                  "floor": "Second Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This is a lecturer's room."
+            },
+            {
+                  "name": "C2-13",
+                  "type": "Room",
+                  "floor": "Second Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This is a lecturer's room."
+            },
+            {
+                  "name": "C2-14",
+                  "type": "Room",
+                  "floor": "Second Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This is a lecturer's room."
+            },
+            {
+                  "name": "C2-15",
+                  "type": "Room",
+                  "floor": "Second Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This is a lecturer's room."
+            },
+            {
+                  "name": "C2-16",
+                  "type": "Room",
+                  "floor": "Second Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This is a lecturer's room."
+            },
+            {
+                  "name": "C2-17",
+                  "type": "Room",
+                  "floor": "Second Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This is a lecturer's room."
+            },
+            {
+                  "name": "C2-18",
+                  "type": "Room",
+                  "floor": "Second Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This is a lecturer's room."
+            },
+            {
+                  "name": "C2-19",
+                  "type": "Room",
+                  "floor": "Second Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This is a lecturer's room."
+            },
+            {
+                  "name": "C2-20",
+                  "type": "Room",
+                  "floor": "Second Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This is a lecturer's room."
+            },
+            {
+                  "name": "C2-21",
+                  "type": "Room",
+                  "floor": "Second Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This is a lecturer's room."
+            },
+            {
+                  "name": "C2-22",
+                  "type": "Room",
+                  "floor": "Second Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This is a lecturer's room."
+            },
+            {
+                  "name": "C2-23",
+                  "type": "Room",
+                  "floor": "Second Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This is a lecturer's room."
+            },
+            {
+                  "name": "C2-24",
+                  "type": "Room",
+                  "floor": "Second Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This is a lecturer's room."
+            },
+            {
+                  "name": "C2-25",
+                  "type": "Room",
+                  "floor": "Second Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This is a lecturer's room."
+            },
+            {
+                  "name": "C2-26",
+                  "type": "Room",
+                  "floor": "Second Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This is a lecturer's room."
+            },
+            {
+                  "name": "C2-27",
+                  "type": "Room",
+                  "floor": "Second Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This is a lecturer's room."
+            },
+            {
+                  "name": "C2-28",
+                  "type": "Room",
+                  "floor": "Second Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This is a lecturer's room."
+            },
+            {
+                  "name": "C2-29",
+                  "type": "Room",
+                  "floor": "Second Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This is a lecturer's room."
+            },
+            {
+                  "name": "C2-30",
+                  "type": "Room",
+                  "floor": "Second Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This is a lecturer's room."
+            },
+            {
+                  "name": "C2-31 & C2-32 (Printing Room)",
+                  "type": "Room",
+                  "floor": "Second Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This room is available for meetings and discussions."
+            },
+            {
+                  "name": "C2-33 (Vault)",
+                  "type": "Room",
+                  "floor": "Second Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This room is available for meetings and discussions."
+            },
+            {
+                  "name": "C2-34 (Document Room)",
+                  "type": "Room",
+                  "floor": "Second Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This room is available for meetings and discussions."
+            },
+            {
+                  "name": "C2-35 & C2-36 (File Room)",
+                  "type": "Room",
+                  "floor": "Second Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This room is available for meetings and discussions."
+            },
+            {
+                  "name": "C2-44",
+                  "type": "Room",
+                  "floor": "Second Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This room is available for meetings and discussions."
+            },
+            {
+                  "name": "C2-45",
+                  "type": "Room",
+                  "floor": "Second Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This room is available for meetings and discussions."
+            },
+            {
+                  "name": "C2-46",
+                  "type": "Room",
+                  "floor": "Second Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This room is available for meetings and discussions."
+            },
+            {
+                  "name": "C2-47",
+                  "type": "Room",
+                  "floor": "Second Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This room is available for meetings and discussions."
+            },
+            {
+                  "name": "C2-47A",
+                  "type": "Room",
+                  "floor": "Second Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This room is available for meetings and discussions."
+            },
+            {
+                  "name": "C2-46A",
+                  "type": "Room",
+                  "floor": "Second Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This room is available for meetings and discussions."
+            },
+            {
+                  "name": "Meeting Room",
+                  "type": "Room",
+                  "floor": "Second Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This room is available for meetings and discussions."
+            },
+            {
+                  "name": "Toilet",
+                  "type": "Toilet",
+                  "floor": "Second Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_b/Toilet_Block_B.jpg",
+                  "description": "Public restroom available for students, staff, and visitors."
             }
       ]
+},
+
+
+{
+      "floorName": "Third Floor",
+      "symbol": "assets/images/blue_3floor_icon.png",
+      "image": "assets/images/floorplan_c3.jpg",
+      "rooms": [
+            {
+                  "name": "C3-01",
+                  "type": "Room",
+                  "floor": "Third Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This room is available for meetings and discussions."
+            },
+            {
+                  "name": "C3-02",
+                  "type": "Room",
+                  "floor": "Third Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This room is available for meetings and discussions."
+            },
+            {
+                  "name": "C3-03",
+                  "type": "Room",
+                  "floor": "Third Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This room is available for meetings and discussions."
+            },
+            {
+                  "name": "C3-04",
+                  "type": "Room",
+                  "floor": "Third Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This room is available for meetings and discussions."
+            },
+            {
+                  "name": "C3-05",
+                  "type": "Room",
+                  "floor": "Third Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This room is available for meetings and discussions."
+            },
+            {
+                  "name": "C3-06",
+                  "type": "Room",
+                  "floor": "Third Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This room is available for meetings and discussions."
+            },
+            {
+                  "name": "C3-07",
+                  "type": "Room",
+                  "floor": "Third Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This room is available for meetings and discussions."
+            },
+            {
+                  "name": "C3-08",
+                  "type": "Room",
+                  "floor": "Third Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This room is available for meetings and discussions."
+            },
+            {
+                  "name": "C3-09",
+                  "type": "Room",
+                  "floor": "Third Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This room is available for meetings and discussions."
+            },
+            {
+                  "name": "C3-10",
+                  "type": "Room",
+                  "floor": "Third Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This room is available for meetings and discussions."
+            },
+            {
+                  "name": "C3-11",
+                  "type": "Room",
+                  "floor": "Third Floor",
+                  "block": "Block C",
+                  "description": "This room is available for meetings and discussions."
+            },
+            {
+                  "name": "C3-12",
+                  "type": "Room",
+                  "floor": "Third Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This room is available for meetings and discussions."
+            },
+            {
+                  "name": "C3-13",
+                  "type": "Room",
+                  "floor": "Third Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This room is available for meetings and discussions."
+            },
+            {
+                  "name": "C3-14",
+                  "type": "Room",
+                  "floor": "Third Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This room is available for meetings and discussions."
+            },
+            {
+                  "name": "C3-15",
+                  "type": "Room",
+                  "floor": "Third Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This room is available for meetings and discussions."
+            },
+            {
+                  "name": "C3-16",
+                  "type": "Room",
+                  "floor": "Third Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This room is available for meetings and discussions."
+            },
+            {
+                  "name": "C3-17",
+                  "type": "Room",
+                  "floor": "Third Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This room is available for meetings and discussions."
+            },
+            {
+                  "name": "C3-18",
+                  "type": "Room",
+                  "floor": "Third Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This room is available for meetings and discussions."
+            },
+            {
+                  "name": "C3-19",
+                  "type": "Room",
+                  "floor": "Third Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This room is available for meetings and discussions."
+            },
+            {
+                  "name": "C3-20",
+                  "type": "Room",
+                  "floor": "Third Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This room is available for meetings and discussions."
+            },
+            {
+                  "name": "C3-21",
+                  "type": "Room",
+                  "floor": "Third Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This room is available for meetings and discussions."
+            },
+            {
+                  "name": "C3-22",
+                  "type": "Room",
+                  "floor": "Third Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This room is available for meetings and discussions."
+            },
+            {
+                  "name": "C3-23",
+                  "type": "Room",
+                  "floor": "Third Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This room is available for meetings and discussions."
+            },
+            {
+                  "name": "C3-24",
+                  "type": "Room",
+                  "floor": "Third Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This room is available for meetings and discussions."
+            },
+            {
+                  "name": "C3-25",
+                  "type": "Room",
+                  "floor": "Third Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This room is available for meetings and discussions."
+            },
+            {
+                  "name": "C3-26",
+                  "type": "Room",
+                  "floor": "Third Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This room is available for meetings and discussions."
+            },
+            {
+                  "name": "C3-27",
+                  "type": "Room",
+                  "floor": "Third Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This room is available for meetings and discussions."
+            },
+            {
+                  "name": "C3-28",
+                  "type": "Room",
+                  "floor": "Third Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This room is available for meetings and discussions."
+            },
+            {
+                  "name": "C3-29",
+                  "type": "Room",
+                  "floor": "Third Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This room is available for meetings and discussions."
+            },
+            {
+                  "name": "C3-30",
+                  "type": "Room",
+                  "floor": "Third Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This room is available for meetings and discussions."
+            },
+            {
+                  "name": "C3-31",
+                  "type": "Room",
+                  "floor": "Third Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This room is available for meetings and discussions."
+            },
+            {
+                  "name": "C3-32",
+                  "type": "Room",
+                  "floor": "Third Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_c/lecturer_room.jpg",
+                  "description": "This room is available for meetings and discussions."
+            },
+            {
+                  "name": "Toilet",
+                  "type": "Toilet",
+                  "floor": "Third Floor",
+                  "block": "Block C",
+                  "imagePath": "assets/images/rooms/block_b/Toilet_Block_B.jpg",
+                  "description": "Public restroom available for students, staff, and visitors."
+            }
+      ]
+      }
+
+]
 }
